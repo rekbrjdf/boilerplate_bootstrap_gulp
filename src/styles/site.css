@@ -13,6 +13,7 @@ main {
   height: 100vh;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+  padding: 0 2rem;
 }
 
 header {
@@ -27,7 +28,6 @@ header {
 
 article {
   color: var(--text);
-  line-height: 1, 5;
   align-self: start;
   font-size: 2.5rem;
 }
@@ -49,13 +49,13 @@ nav > a:hover {
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
-.throwdown {
-  line-height: 2;
-}
-
 .throwdown a {
   color: #d15c57;
   text-decoration: underline;
+}
+
+.throwdown div {
+  margin-bottom: 2rem;
 }
 
 .icon-row {
