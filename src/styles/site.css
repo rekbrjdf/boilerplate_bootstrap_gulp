@@ -1,0 +1,68 @@
+:root {
+  --main: #d1313d;
+  --text: #373737;
+}
+
+body {
+  color: var(--main);
+  line-height: 2;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  font-family: 'Oswald', serif;
+  font-size: 5rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+}
+
+article {
+  color: var(--text);
+  line-height: 1, 5;
+  align-self: start;
+  font-size: 2.5rem;
+}
+
+nav {
+  color: var(--main);
+  margin-bottom: 1rem;
+}
+
+nav > a:hover {
+  transition: color 0.2s ease-in-out;
+  color: #c0d1c2;
+  cursor: pointer;
+}
+
+.pemberton {
+  border-radius: 50%;
+  height: 30rem;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.throwdown {
+  line-height: 2;
+}
+
+.throwdown a {
+  color: #d15c57;
+  text-decoration: underline;
+}
+
+.icon-row {
+  margin: 0 auto 0 auto;
+}
+
+.icon-row .icon {
+  height: 3rem;
+  margin: 0 0.5rem;
+}
