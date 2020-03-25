@@ -29,5 +29,6 @@ _layout.scss
 
 
 # How to start?
-1. `npm run build` to build styles
-2. `npm run dev` to watch files
+1. `npm install`
+2. `npm run build` to build styles
+3. `npm run dev` to watch files

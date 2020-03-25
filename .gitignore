@@ -1,11 +1,11 @@
 /node_modules
-dist
-dist/
+build
+build/
 .vscode/
 .vscode
 package-lock.json
 .angulardoc.json
 vendor/
 resources/
-assets/img/flags/
-assets/img/flags
+build/src/assets/img/flags/
+build/src/assets/img/flags
