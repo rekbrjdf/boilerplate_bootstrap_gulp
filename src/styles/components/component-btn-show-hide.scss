@@ -1,0 +1,8 @@
+.btn-eye-slash {
+    width: 1.75rem;
+    &.active {
+        &:after {
+            content: "\f06e";
+        }
+    }
+}

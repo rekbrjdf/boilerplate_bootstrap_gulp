@@ -1,0 +1,668 @@
+.btn {
+
+    &.btn-parse,
+    &.btn-folder,
+    &.btn-camera,
+    &.btn-scanner {  
+        position: relative;
+        font-family: $font-family-sans-serif;
+        font-weight: $font-weight-bold;
+        padding: .5rem 2rem;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            color: $teal;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+
+        &.btn-lg {
+            font-size: $font-size-lg;
+
+            &:after {
+                padding: 0;
+                line-height: 1;
+                font-size: $font-size-lg * 2;
+            }
+        }
+
+        &.btn-sm {
+            font-size: $font-size-sm;
+
+            &:after {
+                font-size: $font-size-sm * 1.5;
+            }
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-selfie {
+        height: auto;
+        padding: 0;
+    }
+
+    &.btn-scanner {
+        &:after {
+            content: "\f328";
+        }
+    }
+
+    &.btn-camera {
+        &:after {
+            content: "\f030";
+        }
+    }
+
+    &.btn-folder {
+        &:after {
+            content: "\f07b";
+        }
+    }
+
+    &.btn-parse {
+        &:after {
+            content: "\f02a";
+        }
+
+    }
+
+    &.btn-trash {
+        &.btn-lg {
+            height: auto;
+            padding: 0;
+            line-height: 1; 
+        } 
+
+        &:after {
+            content: "\f2ed";
+            font-family: $font-family-icon;
+        }
+
+        &.muted {
+            &:after {
+                color: $gray-500;
+            }
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+
+    }
+
+    &.btn-zoom-out {
+        &.btn-lg {
+            padding: 0;
+            font-size: $font-size-lg * 2;
+        }
+
+        &.btn-sm {
+            font-size: $font-size-sm * 1.5;
+        }
+
+        &:after {
+            content: "\f010";
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-list {
+        &.btn-lg {
+            padding: 0;
+            font-size: $font-size-lg * 2;
+        }
+
+        &.btn-sm {
+            font-size: $font-size-sm * 1.5;
+        }
+
+        &:after {
+            content: "\f022";
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-search {
+        &:after {
+            content: "\f002";
+            font-family: $font-family-icon;
+        }
+    }
+
+    
+
+    &.btn-zoom-in {
+        &.btn-lg {
+            padding: 0;
+            font-size: $font-size-lg * 2;
+        }
+
+        &.btn-sm {
+            font-size: $font-size-sm * 1.5;
+        }
+
+        &:after {
+            content: "\f00e";
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-collapse,
+    &.btn-preview {  
+        line-height: .5rem; 
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+            text-decoration: none;
+        }
+    }
+
+    &.btn-collapse {
+        transform: scaleX(2);
+
+        &:before {
+            content: "\f078";
+            font-size: $font-size-lg;
+            color: $text-muted;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+    }
+
+    &.btn-comment {
+        &:before {
+            content: "\f075";
+            color: $gray-600;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:before {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &.btn-preview {
+        &.btn-lg {
+            height: auto;
+        }
+        &:after {
+            content: "\f06e";
+            color: $gray-600;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-eye-slash {
+        &.btn-lg {
+            height: auto;
+        }
+        &:after {
+            content: "\f070";
+            color: $gray-600;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-print {
+        &:after {
+            content: "\f02f";
+            color: $gray-600;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+    }
+
+    &.btn-barcode {
+        line-height: 1.3;
+        &.btn-lg {
+            padding: 0;
+            font-size: 1.1rem;
+            padding-top: $btn-padding-y / 4;
+            padding-bottom: $btn-padding-y / 4;
+        }
+
+        &:before {
+            content: "\f464";
+            font-weight: 900;
+            font-family: $font-family-icon;
+        }
+    }
+
+    &.btn-pen-big {
+        &.btn-lg {
+            padding: 0;
+            font-size: 1.1rem;
+            padding-top: $btn-padding-y / 4;
+            padding-bottom: $btn-padding-y / 4;
+        }
+
+        &:before {
+            content: "\f304";
+            font-weight: 900;
+            font-family: $font-family-icon;
+            margin: auto;
+        }
+    }
+
+    &.btn-save {
+        &.btn-lg {
+            // padding: 0;
+            // font-size: 1.1rem;
+            padding-top: $btn-padding-y / 4;
+            padding-bottom: $btn-padding-y / 4;
+        }
+
+        &:before {
+            content: "\f0c7";
+            font-weight: 400;
+            font-family: $font-family-icon;
+            margin: auto;
+        }
+    }
+
+    &.btn-arrow-right {
+        &.btn-lg {
+            padding: 0;
+            font-size: 1.2rem;
+            padding-top: $btn-padding-y / 4;
+            padding-bottom: $btn-padding-y / 4;
+        }
+
+        &:before {
+            content: "\f061";
+            font-weight: 900;
+            font-family: $font-family-icon;
+            margin: auto;
+        }
+    }
+
+    &.btn-filter {
+        &.btn-lg {
+            padding: 0;
+            font-size: 1.2rem;
+            padding-top: $btn-padding-y / 4;
+            padding-bottom: $btn-padding-y / 4;
+        }
+
+        &:before {
+            content: "\f0b0";
+            font-weight: 900;
+            font-family: $font-family-icon;
+            margin: auto;
+        }
+        &.btn-small {
+            width: 3.75rem;
+        }
+    }
+
+    &.btn-download {
+        &.btn-lg {
+            padding: 0;
+            font-size: 1.2rem;
+            padding-top: $btn-padding-y / 4;
+            padding-bottom: $btn-padding-y / 4;
+        }
+
+        &:before {
+            content: "\f34a";
+            font-weight: 900;
+            font-family: $font-family-icon;
+            margin: auto;
+        }
+    }
+
+    &.btn-sign-out {
+        &.btn-lg { 
+            font-size: $font-size-lg; 
+        }
+
+        &:before {
+            content: "\f08b";
+            font-weight: 400;
+            font-family: $font-family-icon;
+            margin: auto;
+            color: $white;
+        }
+    }
+
+    &.btn-edit { 
+        &.btn-lg {
+            height: auto;
+        }
+        &:after {
+            content: "\f303";
+            color: $gray-600;
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-attach {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &:before {
+            content: "\f0c6";
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+    }
+    &.btn-csv,
+    &.btn-pdf,
+    &.btn-xls {
+        width: 3.313rem;
+        height: 2.438rem; 
+        position: relative;
+
+        &:before {
+            content: "";
+            height: 1.438rem;
+            width: 1.188rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto; 
+        }
+    }
+    &.btn-xls { 
+        &:before { 
+            background: $custom-icon-xls;
+            background-repeat: no-repeat;
+        }
+    }
+    &.btn-pdf { 
+        &:before { 
+            background: $custom-icon-pdf;
+            background-repeat: no-repeat;
+        }
+    }
+    &.btn-csv { 
+        &:before { 
+            background: $custom-icon-cvs;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &.btn-refresh {
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &.btn-md {
+            font-size: $font-size-sm * 1.5;
+        }
+
+        &:after {
+            content: "\f2f1";
+            font-weight: 400;
+            font-family: $font-family-icon;
+            padding-right: .5rem;
+            padding-left: .5rem;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-plus {
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &:before {
+            content: "\f067";
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+    }
+
+    &.btn-close {
+        &.btn-sm {
+            font-size: $font-size-sm * .8;
+        }
+
+        &.btn-lg {
+            font-size: $font-size-lg * 1.5;
+        }
+
+        &:after {
+            content: "\f00d";
+            font-weight: 300;
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-crop {
+        &.btn-sm {
+            font-size: $font-size-sm * 1.5;
+        }
+
+        &.btn-lg {
+            font-size: $font-size-lg * 2;
+        }
+
+        &:after {
+            content: "\f565";
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-info-icon {
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &:before {
+            content: "\f05a";
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+    }
+
+    &.btn-sort {
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &:before {
+            content: "\f0dc";
+            font-weight: 600;
+            font-family: $font-family-icon;
+        }
+    }
+    &.btn-sort-down {
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &:before {
+            content: "\f160";
+            font-weight: 600;
+            font-family: $font-family-icon;
+        }
+
+        &:hover {
+            &:before { 
+                color: $gray-400; 
+            }
+        }
+
+        &.active {
+            &:before { 
+                color:$info; 
+            }
+        }
+    }
+    &.btn-sort-up {
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &:before {
+            content: "\f161"; 
+            font-weight: 600;
+            font-family: $font-family-icon;
+        }
+
+        &:hover {
+            &:before { 
+                color: $gray-400; 
+            }
+        }
+
+        &.active {
+            &:before { 
+                color: $info; 
+            }
+        }
+    }
+
+    &.btn-sliders {
+        padding-top: .1rem;
+        padding-bottom: .1rem;
+
+        &.btn-sm {
+            font-size: $font-size-sm * 0.8;
+        }
+
+        &.btn-lg {
+            font-size: $font-size-lg * 1.5;
+        }
+
+        &:before {
+            content: "\f1de";
+            font-weight: 400;
+            font-size: $font-size-lg * 1.2;
+            font-family: $font-family-icon;
+        }
+    }
+
+    &.btn-expand {
+        padding: 0;
+
+        &.btn-lg {
+            font-size: $font-size-lg * 2;
+        }
+
+        &.btn-sm {
+            font-size: $font-size-sm * 1.5;
+        }
+
+        &:after {
+            content: "\f424";
+            font-weight: 400;
+            font-family: $font-family-icon;
+        }
+
+        @include hover-focus {
+            &:after {
+                opacity: $disabled-opacity;
+            }
+        }
+    }
+
+    &.btn-float {
+        position: absolute;
+        // transition: $transition-fade;
+
+        @include hover-focus {
+            color: $component-custom-button-link-hover-color;
+        }
+
+
+        &:before {
+            padding: 0;
+        }
+    }
+
+}
+
+.collapse-hidemoon-arrow {
+    & .btn-collapse {
+        transition: $transition-base;
+        transform: rotate(180deg) scaleX(2);
+    }
+}

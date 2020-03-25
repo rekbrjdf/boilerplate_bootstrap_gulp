@@ -1,0 +1,48 @@
+.calculator-main {
+    .calculator-main-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .calculator-main-comission,
+    .calculator-main-rate {
+        position: relative;
+        color: $teal;
+    }
+
+    .calculator-main-rate:after {
+        content: "\f621";
+        font-family: $font-family-icon;
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+        position: absolute;
+        left: -25px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 19px;
+        color: $teal;
+    }
+
+    .calculator-main-comission:after {
+        content: "\f86c";
+        font-family: $font-family-icon;
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+        position: absolute;
+        left: -25px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 19px;
+        color: $teal;
+    }
+
+    .calculator-main-count {
+        padding-left: 30px;
+    }
+
+    .calculator-main-label {
+        font-size: $font-size-base * 0.875;
+    }
+}

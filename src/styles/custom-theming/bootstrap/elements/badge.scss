@@ -1,0 +1,41 @@
+// badge sizing
+
+.badge {
+    &.badge-sm{
+        font-size: $font-size-sm;
+    }
+
+    &.badge-md{
+        font-size: $font-size-base;
+    }
+
+    &.badge-lg{
+        font-size: $font-size-lg;
+    }
+}
+
+// badge paddings
+.badge {
+    &.badge-gutters {
+        padding: $btn-padding-y $btn-padding-x;
+    }
+}
+
+
+// badge styling 
+.badge {
+    &.badge-light{
+        background-color: $white !important;
+        color: $gray-400 !important;
+    }
+
+    &.badge-gray {
+        background-color: $gray-500;
+        color: $white;
+    }
+}
+
+// hmm.. why did i do this?
+.jumbotron .badge-light {
+    padding-left: 0 !important;
+}

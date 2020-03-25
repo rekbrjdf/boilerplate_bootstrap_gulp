@@ -1,0 +1,24 @@
+component-notification-blocks,
+.notification-blocks {
+    text-align: center;
+    max-width: 580px;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    border: $border-width solid $gray-200;
+    margin: auto;
+    @include border-radius($border-radius-lg);
+    .notification-blocks-icon {
+        &:before {
+            color: $red;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .notification-blocks-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

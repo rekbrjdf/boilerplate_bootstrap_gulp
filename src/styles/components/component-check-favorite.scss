@@ -1,0 +1,18 @@
+component-check-favorite,
+.check-favorite {
+    cursor: pointer; 
+    .check-favorite-icon { 
+        &:before {
+            content: "\f005";
+            font-family: $font-family-icon;
+            font-weight: $font-weight-light;
+
+        }
+        &.active {
+            color: $yellow;
+            &:before {
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}

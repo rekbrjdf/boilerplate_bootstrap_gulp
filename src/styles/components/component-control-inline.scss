@@ -1,0 +1,57 @@
+component-control-inline,
+.control-inline {
+
+    & .form-control {
+        border-right: none;
+
+        &:focus {
+            border-color: $input-border-color !important
+        }
+
+    }
+
+    & .input-group-text,
+    & .input-group-append {
+        height: auto;
+        border-left: none;
+        background: $white;
+        user-select: none;
+        font-size: $font-size-sm;
+
+        & .is-valid {
+            @extend .form-control.is-valid; 
+        }
+
+        & .is-invalid {
+            @extend .form-control.is-invalid; 
+        }
+        .input-group-text {
+            &:after {
+                background: $white;
+            }
+            
+        }
+
+        &.disabled {
+            .input-group-text {
+                &:after {
+                   background: $input-disabled-bg; 
+                }
+            }
+        }
+        
+
+        &.disabled {
+            .input-group-text {
+                background: $input-disabled-bg;
+            }
+            
+        }
+    }
+
+    & .btn-float {
+        right: 4.5rem;
+        height: 100%;
+        padding: 0;
+    }
+}

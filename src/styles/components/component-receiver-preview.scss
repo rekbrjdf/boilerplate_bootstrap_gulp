@@ -1,0 +1,338 @@
+component-receiver-preview,
+.receiver-preview {
+    border-left: .5625rem solid $white;
+    user-select: none;
+    border-radius: $border-radius;
+    transition: $transition-base;
+    &.show {
+        .receiver-preview-navigation {
+            top: 0;
+            bottom: 1px;
+            box-shadow: -7px 1px 12px -6px rgba(0,0,0,0.25);
+        }
+    }
+
+    .receiver-preview-start { 
+        position: absolute;
+        left: 1rem;
+        top: .5rem; 
+    }
+
+    .receiver-preview-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .receiver-preview-wrapper {
+        position: relative;
+        display: flex;
+        align-content: center;
+        overflow: hidden;
+        padding: 1.5rem 85px 1.5rem 1rem ; 
+
+    }
+
+    .receiver-preview-flag,
+    .receiver-preview-date,
+    .receiver-preview-amount,
+    .receiver-preview-direction {
+        padding: 0 1rem;
+    }
+
+    .receiver-preview-money {
+        color: $indigo;
+    }
+
+    .receiver-preview-avatar {
+        width: 6.375rem;
+        height: 6.375rem;
+        margin: auto 0;
+        background: $gray-100;
+        border-radius: 50px;
+        border: $border-width solid $teal;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: $transition-base;
+
+
+        .receiver-preview-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .receiver-preview-name {
+            font-size: 2.25rem;
+            color: $teal;
+            margin: 0;
+        }
+
+        .receiver-preview-img+.receiver-preview-name {
+            display: none;
+        }
+    }
+
+    .receiver-preview-login {
+        font-weight: $font-weight-bold;
+        color: $indigo;
+        font-size: 2rem;
+    }
+
+    .receiver-preview-send {
+        width: 35%;
+        padding: 0 1rem;
+        .btn {
+            width: 122px;
+        }
+        .receiver-preview-send-id {
+            font-size: 1.125rem;
+        }
+    }
+    .receiver-preview-content {
+        width: calc(100% - 6.375rem - 35%);
+        .receiver-preview-content-button {
+            .btn {
+                width: 122px;
+            }
+        }
+        .receiver-preview-content-button,
+        .receiver-preview-content-title {
+            padding-left: 80px;
+        }
+    }
+
+    .receiver-preview-flag {
+        width: 65px;
+
+        .receiver-preview-flag-img {
+            box-shadow: $jumbotron-box-shadow;
+        }
+    } 
+
+    .receiver-preview-navigation { 
+        position: absolute;
+        top: .5rem;
+        bottom: .5rem;  
+    }
+
+    &.receiver-preview-add {
+        cursor: pointer;
+        .receiver-preview-login {
+            color: $gray-300;
+        }
+        .receiver-preview-avatar { 
+            border: $border-width solid $gray-100; 
+            .receiver-preview-name {
+                color: $gray-600;
+            }
+        }
+        .receiver-preview-add-text {
+            color: $indigo;
+            font-size: 0.875rem;
+        }
+        .receiver-preview-send {
+            width: 53%;
+        }
+    }
+
+    &:hover {
+        border-left: .5625rem solid $teal;
+        box-shadow: $jumbotron-box-shadow;
+        transition: $transition-base;
+        .receiver-preview-avatar {
+            background: $teal;
+            border: $border-width solid $teal;
+            transition: $transition-base;
+
+
+            .receiver-preview-name {
+                color: $white;
+            }
+        }
+    }
+}
+.receiver-preview-btn-collapse {
+    font-weight: $font-weight-bold;
+    padding: 0;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
+}
+@include media-breakpoint-down(md) { 
+    component-receiver-preview,
+    .receiver-preview {
+        .receiver-preview-wrapper {
+            display: block;
+        }
+        .receiver-preview-send,
+        .receiver-preview-avatar-wrapper {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .receiver-preview-send {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .receiver-preview-content {
+            padding-left: 0;
+            width: auto;
+
+            .receiver-preview-content-button,
+            .receiver-preview-content-title {
+                padding-left: 120px;
+            }
+
+        }
+        .receiver-preview-flag {
+            width: 65px;
+            margin: 0 20px;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) { 
+    component-receiver-preview,
+    .receiver-preview {
+        .receiver-preview-wrapper {
+            display: block;
+        }
+        .receiver-preview-info {
+            flex-wrap: wrap;
+            .receiver-preview-direction {
+                padding-left: 70px;
+            }
+        }
+        .receiver-preview-info {
+            flex-wrap: wrap;
+            .receiver-preview-amount,
+            .receiver-preview-direction {
+                padding-left: 70px;
+                padding-bottom: 5px;
+            }
+        }
+        .receiver-preview-send,
+        .receiver-preview-avatar-wrapper {
+            display: inline-block;
+            vertical-align: top;
+            padding: 0;
+        }
+        .receiver-preview-avatar {
+            width: 3.375rem;
+            height: 3.375rem;
+            margin-bottom: 1rem;
+            .receiver-preview-name {
+                font-size: 1.25rem;   
+            }
+        }
+        .receiver-preview-navigation {
+            top: 3rem;
+            bottom: 3rem; 
+        }
+        .receiver-preview-send {
+            width: 78%;
+            margin-bottom: 20px;
+            .receiver-preview-send-id {
+                font-size: 1rem;
+            }
+        }
+        .receiver-preview-start {
+            left: auto;
+            right: 1rem;
+            top: 1rem;
+        }
+        .receiver-preview-login {
+            font-size: 20px;
+        }
+        .receiver-preview-content {
+            padding-left: 0;
+            width: auto;
+            margin-left: -0.7rem;
+
+            .receiver-preview-content-button,
+            .receiver-preview-content-title {
+                padding-left: 70px;
+            }
+
+        }
+        .receiver-preview-flag {
+            width: auto;
+            margin: 0.7rem;
+            padding: 0; 
+        }
+        &.receiver-preview-add { 
+            .receiver-preview-send {
+                width: 78%;
+            }
+            .receiver-preview-wrapper {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) { 
+    component-receiver-preview,
+    .receiver-preview {
+        .receiver-preview-wrapper {
+            display: block;
+        }
+        .receiver-preview-info {
+            flex-wrap: wrap;
+            .receiver-preview-amount,
+            .receiver-preview-direction {
+                padding-left: 70px;
+                padding-bottom: 5px;
+            }
+        }
+        .receiver-preview-send,
+        .receiver-preview-avatar-wrapper {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .receiver-preview-avatar {
+            width: 3.375rem;
+            height: 3.375rem;
+            .receiver-preview-name {
+                font-size: 1.25rem;   
+            }
+        }
+        .receiver-preview-navigation {
+            top: 3rem;
+            bottom: 3rem; 
+        }
+        .receiver-preview-send {
+            width: 98%;
+            margin-bottom: 1.125rem;
+            .receiver-preview-send-id {
+                font-size: 1rem;
+            }
+        }
+        .receiver-preview-start {
+            left: auto;
+            right: 1rem;
+            top: 1rem;
+        }
+        .receiver-preview-login {
+            font-size: 1.125rem;
+        }
+        .receiver-preview-content {
+            padding-left: 0;
+            width: auto;
+
+            .receiver-preview-content-button,
+            .receiver-preview-content-title {
+                padding-left: 70px;
+            }
+
+        }
+        .receiver-preview-flag {
+            width: auto;
+            margin: 0.7rem;
+            padding: 0; 
+        }
+    }
+}

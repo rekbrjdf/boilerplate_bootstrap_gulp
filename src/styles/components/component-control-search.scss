@@ -1,0 +1,116 @@
+component-control-search,
+.control-search {
+    & .input-group-label {
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
+        margin: 0;
+    }
+
+    .search-input {
+        border-radius: $input-border-radius;
+        overflow: hidden;
+
+        .search-input-icon {
+            &:after {
+                content: "\f002";
+                font-style: normal;
+                font-weight: $font-weight-bold;
+                font-family: $font-family-icon;
+                font-size: $font-size-base;
+                color: $gray-300;
+            }
+        }
+
+    }
+
+    .form-control {
+        background: $gray-100;
+    }
+
+    & .input-group {
+        margin: 0;
+
+        &.input-group-lg {
+            & .form-control {
+                &::placeholder {
+                    color: $gray-800;
+                    text-align: center;
+                    font-family: $font-family-monospace;
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-lg * 1.25;
+                }
+            }
+
+            &.control-search-left {
+                & .form-control {
+                    &::placeholder {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &.input-group-sm {
+            & .form-control {
+
+                &::placeholder {
+                    color: $gray-800;
+                    text-align: center;
+                    font-family: $font-family-monospace;
+                    font-weight: $font-weight-bold;
+                    font-size: $font-size-sm * 1.25;
+                }
+            }
+        }
+
+        & .form-control {
+            background: $gray-100;
+
+            &::placeholder {
+                color: $gray-300;
+                text-align: left;
+                font-family: $font-family-monospace;
+                font-weight: $font-weight-bold;
+                font-size: $font-size-base;
+            }
+
+            &:focus {
+                background: transparent;
+            }
+        }
+
+        & .input-group-append {
+            position: absolute;
+            top: $border-width;
+            right: 0;
+            height: 100%;
+            background: transparent;
+
+            & .input-group-text {
+                padding-left: 0;
+                border: none;
+                background: transparent;
+                font-size: $font-size-base;
+                color: $gray-300;
+
+                &:after {
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+;
+
+/* Add margin-bottom to this component, when it is inside the accordion */
+
+.panel-body,
+.card-block,
+.card-body {
+
+    & component-control-search,
+    & .control-search {
+        margin-bottom: 2rem;
+    }
+}

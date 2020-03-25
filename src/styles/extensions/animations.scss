@@ -1,0 +1,22 @@
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse { // used for the skeleton
+    0% {
+        background-color: rgba(165, 165, 165, 0.15);
+    }
+    50% {
+        background-color: rgba(165, 165, 165, 0.2);
+    }
+    100% {
+        background-color: rgba(165, 165, 165, 0.15);
+    }
+}

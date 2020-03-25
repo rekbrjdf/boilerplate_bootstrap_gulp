@@ -1,0 +1,32 @@
+component-send-money-summary,
+.send-money-summary {
+
+    .send-money-summary-title {
+        font-size: 1.125rem;
+        color: $gray-300;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: $font-weight-bold;
+    }
+
+    .send-money-summary-header {
+        font-size: 0.875rem;
+        color: $gray-300;
+        border-bottom: 2px solid $gray-300;
+        margin-bottom: 1rem;
+    }
+}
+.send-money-summary-block {
+    display: none !important;
+}
+
+@include media-breakpoint-down(sm) {
+    .send-money-summary-block {
+        max-width: 100% !important;
+        display: block !important;
+    }
+    .send-money-summary-modal {
+        display: none !important;
+    }
+
+}

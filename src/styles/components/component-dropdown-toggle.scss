@@ -1,0 +1,184 @@
+.custom-dropdown-toggle {
+    display: flex;
+    position: relative;
+    padding: 0;
+    padding-right: 50px;
+
+    &:after {
+        display: none;
+    }
+
+    &:before {
+        content: "";
+        font-size: 1rem;
+        position: absolute;
+        right: 1rem;
+        top: 3px;
+        bottom: 0;
+        margin: auto;
+        width: 2.5rem;
+        height: 9px;
+        background: $custom-dropdown-indicator no-repeat; 
+    }
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+    
+      &:before {
+        content: "\f078";
+        font-size: 1.5rem;
+        position: absolute;
+        color: $gray-300;
+        top: -20px;
+        bottom: 0; 
+        z-index: 1; 
+        right: 5px;
+        font-family: $font-family-icon;  
+      }
+    } 
+
+}
+
+.custom-dropdown {
+    display: flex;
+    position: relative;
+    padding: 0;
+    padding-left: 6px;
+    padding-right: 8px;
+
+    .dropdown-menu {
+        right: 0;
+        left: auto;
+    }
+
+    .dropdown-toggle {
+        font-family: $font-family-monospace;
+        font-weight: $font-weight-bold;
+        color: $gray-300;
+        &:after {
+            display: none;
+        }
+    }
+    &.custom-dropdown-point {
+        &:after {
+            content: "\f3c5";
+            font-family: $font-family-icon;
+            font-size: 1rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto; 
+            height: 19px;
+            color: $gray-300;
+        }
+    }
+    &.custom-dropdown-plus {
+        .dropdown-toggle {
+            font-size: 24px;
+            color: $indigo;
+        } 
+        &:after {
+            content: "\f055";
+            font-family: $font-family-icon;
+            font-size: 1.5rem;
+            position: absolute;
+            left: -12px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: 33px;
+            color: $indigo;
+        }
+        &:before {
+            display: none;
+        }
+    } 
+
+    &:before {
+        content: "";
+        font-size: 1rem;
+        position: absolute;
+        right: 0;
+        top: 5px;
+        bottom: 0;
+        margin: auto;
+        width: 1.5rem;
+        height: 9px;
+        background: $custom-dropdown-indicator-header no-repeat;
+        background-size: cover;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+    
+      &:before {
+        content: "\f078";
+        font-size: 0.7rem;
+        position: absolute;
+        color: $gray-300;
+        top: -5px;
+        bottom: 0;
+        margin: auto;
+        z-index: 1;
+        height: 9px;
+        right: -5px;
+        font-family: $font-family-icon;  
+      }
+    } 
+}
+@include media-breakpoint-down(sm) {
+    .custom-dropdown { 
+        padding-left: 0;
+        padding-right: 5px;
+    } 
+    &.custom-dropdown-point:after {
+        display: none; 
+    }
+}
+
+
+.animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0rem);
+      opacity: 1;
+    }
+  
+    0% {
+      transform: translateY(1rem);
+      opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes slideIn {
+    0% {
+      -webkit-transform: transform;
+      -webkit-opacity: 0;
+    }
+  
+    100% {
+      -webkit-transform: translateY(0);
+      -webkit-opacity: 1;
+    }
+  
+    0% {
+      -webkit-transform: translateY(1rem);
+      -webkit-opacity: 0;
+    }
+  }
+  
+  .slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+  }

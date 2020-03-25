@@ -1,0 +1,28 @@
+component-input-hidden-data-preview,
+.input-hidden-data-preview {
+    position: relative;
+    .form-control-lg {
+        & + .input-group-addon i {
+            height: $input-height-lg;
+            line-height: $input-height-lg;
+            font-size: $font-size-lg;
+        } 
+    }
+    .form-control-sm {
+        & + .input-group-addon i {
+            height: $input-height-sm;
+            line-height: $input-height-sm;
+            font-size: $font-size-sm;
+        }
+    }
+    i { 
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        bottom: 0;
+        height: $input-height;
+        line-height: $input-height;
+        margin: auto;
+        font-size: $font-size-base;
+    } 
+}

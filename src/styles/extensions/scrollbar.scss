@@ -1,0 +1,39 @@
+
+body {
+  scrollbar-face-color: $gray-500;
+  scrollbar-track-color: $gray-200; 
+}
+::-webkit-scrollbar {
+  width: 1em;
+  height: 0.6em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-500;
+  border-radius: $border-radius;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray-200;
+  border-radius: $border-radius;
+}
+
+
+.scroll-sm {
+  &::-webkit-scrollbar {
+    width: 0.6em;
+    height: 0.6em;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $gray-200;
+    border-radius: $border-radius;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $gray-100;
+    border-radius: $border-radius;
+  }
+}
+
+

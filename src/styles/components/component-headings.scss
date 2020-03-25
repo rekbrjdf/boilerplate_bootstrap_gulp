@@ -1,0 +1,40 @@
+component-heading-display-1,
+.heading {
+    &-display-1 { 
+        font-size: $h1-font-size;
+        color: $gray-600; 
+    }
+    &-display-2 {
+        font-size: $h2-font-size;
+        color: $gray-600; 
+    }
+    &-display-3 {
+        font-size: $h3-font-size;
+        color: $gray-600; 
+    }
+    &-display-4 {
+        font-size: $h4-font-size;
+        color: $gray-600; 
+    }
+    &-display-5 {
+        font-size: $h5-font-size;
+        color: $gray-600;  
+    }
+    &-display-6 {
+        font-size: $h6-font-size;
+        color: $gray-600; 
+    }
+    &-normal {
+        font-weight: $font-weight-normal; 
+    }
+    &-bold {
+        font-weight: $font-weight-bold; 
+    }
+    &-variation {
+        font-family: $font-family-sans-serif;
+    }
+    &-muted-color {
+        color: $primary; 
+    }
+
+};

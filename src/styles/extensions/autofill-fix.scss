@@ -1,0 +1,13 @@
+/* only for the webkit */
+input, textarea, select {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        background-color: $white;
+        -webkit-text-fill-color: $black;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        transition: $transition-base;
+    }
+}
+

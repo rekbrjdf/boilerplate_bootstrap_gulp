@@ -1,0 +1,64 @@
+.jumbotron {
+    &component-jumbotron-light,
+    &.jumbotron-light {
+        background-color: $white;
+        padding: $jumbotron-padding;
+
+        box-shadow: $jumbotron-box-shadow;
+        .input-group-append {  
+            background: $white; 
+        }
+    }
+    &.jumbotron-primary {
+        @include jumbotron-background($purple);
+        padding: $jumbotron-padding / 2;
+
+        box-shadow: $jumbotron-box-shadow;
+    }
+    &.jumbotron-collapse-form {
+        .input-group-append {
+            background: $jumbotron-bg;
+        }
+    }
+    &.jumbotron-dark {
+        padding: ($jumbotron-padding / 2) ($jumbotron-padding / 2);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+
+        @include media-breakpoint-up(sm) {
+            padding: ($jumbotron-padding / 2) ($jumbotron-padding / 2);
+        }
+        .input-group-append {  
+            background: $jumbotron-bg; 
+        }
+    }
+    &.jumbotron-muted {
+        background: $white;
+       
+        // box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+        // padding: ($jumbotron-padding / 2) 0;
+
+        box-shadow: none;
+        padding: 0;
+        .input-group-append {  
+            background: $white; 
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .jumbotron {
+        &.jumbotron-muted {
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); 
+            padding: ($jumbotron-padding) ($jumbotron-padding * 3);
+        }
+    }   
+}
+
+@include media-breakpoint-down(sm) {
+    .jumbotron {
+        &.jumbotron-light { 
+            padding: 1rem;
+        }
+    } 
+}
+ 

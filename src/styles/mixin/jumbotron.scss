@@ -1,0 +1,3 @@
+@mixin jumbotron-background($color) {
+    background: lighten($color, 20);
+}

@@ -1,0 +1,83 @@
+<!-- component show-more begin -->
+<div class="row show-more-block">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="show-more-block-wrapper">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <div class="col-12 form-group">
+                                    <label>Address</label>
+                                    <div class="custom-select-arrow">
+                                        <select placeholder="Country"
+                                            class="custom-select custom-select-lg">
+                                            <option selected="">Germany</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12  form-group">
+                                    <label>City</label>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="City">
+                                </div>
+                                <div class="col-12  form-group">
+                                    <label>Street</label>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="Street">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-lg-6 form-group">
+                                    <label>Building</label>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="Bld.">
+                                </div>
+                                <div class="col-6 col-sm-6 col-lg-6 form-group">
+                                    <label>Apart.</label>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="Apart.">
+                                </div>
+                                <div class="col-12 col-lg-6 col-sm-12 col-lg-12 form-group">
+                                    <label>Post code</label>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="Post code">
+                                </div>
+                                <div class="col-12 col-lg-6 col-sm-12 col-lg-12 form-group">
+                                    <label>Email</label>
+                                    <input class="form-control form-control-lg" type="text"
+                                        placeholder="example@gmail.com">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <a class="show-more-button">Show less</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- component show-more end -->
+
+<script>
+    $(document).ready(function () {
+        $('.show-more-button').click(function () {
+            $('.show-more-block-wrapper').toggleClass("visible");
+            $('.show-more-button').toggleClass("active");
+            if ($('.show-more-button').hasClass("active")) {
+                $('.show-more-button').text("Show more");
+            } else {
+                $('.show-more-button').text("Show less");
+            }
+        });
+    });
+</script>

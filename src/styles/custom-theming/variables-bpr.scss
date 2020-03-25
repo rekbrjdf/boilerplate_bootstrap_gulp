@@ -1,0 +1,479 @@
+// // BPREMIT ONLINE STYLING
+// // Common bootstrap variables reset.
+
+// // Variables
+// //
+// // Variables should follow the `$component-state-property-size` formula for
+// // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// // Color system
+
+$white: #ffffff;
+$gray-100: #E9E9E9;
+$gray-200: #D3D3D3;
+$gray-300: #BEBBBB;
+$gray-400: #949494;
+$gray-500: #808080;
+$gray-600: #616161;
+$gray-700: #545454;
+$gray-800: #3F3F3F;
+$gray-900: #2C2C2C;
+$black: #000;
+
+$blue: #4D6CA8;
+$indigo: #26256C;
+$purple: #9D64E5;
+$pink: #FF64A5;
+$red: #FF303C; 
+$orange: #FFB846;
+$yellow: #F3DF2E;
+$green: #86FBB5;
+$teal: #698ED5;
+$cyan: #E9EFF4;
+
+$primary: $indigo;
+$secondary: $teal;
+$success: $green;
+$info: $gray-300;
+$warning: $orange;
+$danger: $red;
+$light: $teal;
+$dark: $gray-900;
+$link: $gray-600;
+
+// $theme-colors: ();
+// // stylelint-disable-next-line scss/dollar-variable-default
+
+// $theme-colors: map-merge((
+//   "primary": $primary,
+//   "secondary": $secondary,
+//   "success": $success,
+//   "info": $info,
+//   "warning": $yellow,
+//   "danger": $danger,
+//   "light": $light,
+//   "dark": $dark),
+//   $theme-colors
+// );
+
+
+
+// // Options
+// //
+// // Quickly modify global styling by enabling or disabling optional features.
+
+// // $enable-caret:                                true;
+// // $enable-rounded:                              true;
+// // $enable-shadows:                              false;
+// // $enable-gradients:                            false;
+// // $enable-transitions:                          true;
+// // $enable-prefers-reduced-motion-media-query:   true;
+// // $enable-grid-classes:                         true;
+// // $enable-pointer-cursor-for-buttons:           true;
+// // $enable-print-styles:                         true;
+// // $enable-responsive-font-sizes:                false;
+// // $enable-validation-icons:                     true;
+// // $enable-deprecation-messages:                 true;
+
+// // Spacing
+// //
+// // Control the default styling of most Bootstrap elements by modifying these
+// // variables. Mostly focused on spacing.
+// // You can add more entries to the $spacers map, should you need more variation.
+
+// $spacer: 1.2rem; // 1rem
+
+
+
+// // Body
+// //
+// // Settings for the `<body>` element.
+
+$body-color: $gray-600;
+// $body-bg: $white; // duplicate
+
+
+
+// // Links
+// //
+// // Style anchor elements.
+
+// $link-color: darken($info, 15%); // theme-color("primary") !default;
+
+
+
+// // Paragraphs
+// //
+// // Style p element.
+
+// $paragraph-margin-bottom: .5rem; // 1rem
+
+
+
+// // Grid breakpoints
+// //
+// // Define the minimum dimensions at which your layout will change,
+// // adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px
+  ); // 1200 default
+
+
+
+// // Grid containers
+// //
+// // Define the maximum width of `.container` for different screen sizes.
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 991px,
+//   lg: 1240px,
+//   xl: 1300px
+// );
+
+
+
+// // Grid columns
+// //
+// // Set the number of columns and specify the width of the gutters.
+// // ...
+
+
+
+// // Components
+// //
+// // Define common padding and border radius sizes and more.
+
+// $line-height-lg: 1.7; // 1.5
+// $line-height-sm: 1.5; // duplicate in origin bootstrap
+
+$border-width: 2px; // 1px
+
+// $border-radius: .2rem; // .25rem !default;
+// $border-radius-lg: .3rem; // duplicate
+// $border-radius-sm: .2rem; // duplicate
+
+// $component-active-color: $white; // duplicate
+$component-active-bg: $gray-600; // theme-color("primary") !default;
+
+// $transition-base: all .3s ease-in-out; // all .2s ease-in-out !default;
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: 'Noto Sans' , 'Noto Sans SC' , sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: 'Titillium Web', sans-serif, monospace;
+
+$font-size-base: 1rem; // 1rem  // Assumes the browser default, typically `16px
+$font-size-lg: ($font-size-base * 1.5); // $font-size-base * 1.25 !default;
+// $font-size-sm: ($font-size-base * .875); // duplicate
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// $line-height-base: 1.5; // duplicate
+
+$h1-font-size: $font-size-base * 2; // $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 1.5; // $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.25; // $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.125; // $font-size-base * 1.75 !default;
+$h5-font-size: $font-size-base * 0.875; // $font-size-base * 1.75 !default;
+$h6-font-size: $font-size-base * 0.75; // $font-size-base * 1.75 !default;
+
+
+
+$headings-font-family: $font-family-monospace;
+// $headings-color: inherit;
+
+// $text-muted: $gray-400; // $gray-600 !default;
+
+
+
+
+// // Tables
+// //
+// // Customizes the `.table` component with basic values, each used across all table variations.
+
+// $table-hover-bg: $gray-100; // rgba($black, .075) !default;
+
+
+
+
+// // Buttons + Forms
+// //
+// // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-disabled-bg: $gray-200;
+
+// $input-btn-padding-y: .475rem; // .375rem !default;
+// $input-btn-padding-x: .75rem; // .75rem !default;
+// $input-btn-line-height: $line-height-base;
+
+// $input-btn-focus-width: .1rem; // .2rem !default;
+// $input-btn-focus-color: rgba($component-active-bg, .15); // rgba($component-active-bg, .25) !default;
+// $input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color; // none; //0 0 2px $input-btn-focus-width $input-btn-focus-color;
+
+// $input-btn-padding-y-sm: .25rem; // duplicate
+// $input-btn-padding-x-sm: .5rem; // duplicate
+// $input-btn-line-height-sm: $line-height-sm; // duplicate
+
+// $input-btn-padding-y-lg: .6rem / 2; // .5rem !default;
+// $input-btn-padding-x-lg: 1rem; // 1rem !default;
+// $input-btn-line-height-lg: $line-height-lg; // $font-size-lg !default;
+
+$input-btn-border-width: $border-width;
+
+
+
+// // Buttons
+// //
+// // For each of Bootstrap's buttons, define text, background, and border color.
+
+// $btn-padding-y: $input-btn-padding-y / 2; // $input-btn-padding-y !default;
+// $btn-font-size: ($font-size-base * 0.75); // input-btn-font-size !default;
+
+$btn-font-weight: $font-weight-bold; // $font-weight-normal
+
+
+
+// // Forms
+
+// $label-margin-bottom: .25rem;
+
+// $input-padding-y: $input-btn-padding-y;
+// $input-padding-x: $input-btn-padding-x;
+
+// $input-line-height: $input-btn-line-height;
+
+// $input-padding-y-lg: $input-btn-padding-y-lg * .7; // $input-btn-padding-y-lg !default;
+
+// $input-color: $gray-800; // $gray-700 !default;
+$input-border-color: $cyan; // $gray-400 !default;
+$input-border-width: $input-btn-border-width; // duplicate
+$input-box-shadow: inset 0 .25rem .25rem rgba($black, .1); // inset 0 1px 1px rgba($black, .075) !default;
+
+// $input-border-radius: $border-radius;
+
+$input-bg: $cyan;
+$input-focus-bg: $white;
+// $input-focus-box-shadow: $input-btn-focus-box-shadow;
+
+$input-focus-border-color: $teal;
+$input-focus-color: $teal;
+$input-placeholder-color: $gray-300;
+
+// $form-group-margin-bottom: .5rem; // 1rem !default;
+
+// $custom-control-indicator-bg: $gray-300; // $input-bg
+// $custom-control-indicator-box-shadow: $input-box-shadow; // $input-box-shadow
+
+// $custom-control-indicator-checked-color: $component-active-color; // duplicate
+
+$custom-control-indicator-focus-box-shadow: none; // 0 0 0 1px $body-bg, $input-btn-focus-box-shadow;
+
+// $custom-checkbox-indicator-icon-checked: str-replace(url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" role="img" viewBox="0 0 512 512"><path fill="#{$white}" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>'), "#", "%23");
+
+// $custom-checkbox-indicator-indeterminate-color: $custom-control-indicator-checked-color;
+// $custom-checkbox-indicator-icon-indeterminate: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$custom-checkbox-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), "#", "%23");
+$custom-control-indicator-focus-border-color: $gray-600;
+$custom-control-indicator-checked-border-color: $gray-600;
+$custom-control-indicator-active-border-color: $gray-600; 
+$custom-radio-indicator-icon-checked: str-replace(url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="3" fill="#{$gray-600}"/></svg>'), "#", "%23");
+
+// $custom-select-bg-size: $font-size-lg * 1.4 ($font-size-lg * 1.2); // 8px 10px !default;
+$custom-select-indicator-color: $gray-800;
+$custom-select-indicator: str-replace(url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-14" role="img" viewBox="0 0 448 512"><path fill="#{$custom-select-indicator-color}" d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"/></svg>'), "#", "%23");
+
+
+
+// // Form validation
+
+// $form-feedback-valid-color: $gray-700; // theme-color("success") !default;
+
+
+
+// // Z-index master list
+// //
+// // Warning: Avoid customizing these values. They're used for a bird's eye view
+// // of components dependent on the z-axis and are designed to all work together.
+// // ...
+
+
+
+// // Navs
+
+// $nav-tabs-border-color: $gray-700; // $gray-300 !default;
+// $nav-tabs-link-hover-border-color: $gray-500 $gray-700 $nav-tabs-border-color; // $gray-200 $gray-200 $nav-tabs-border-color !default;
+// $nav-tabs-link-active-color: $gray-900;
+// $nav-tabs-link-active-bg: $body-bg;
+// $nav-tabs-link-active-border-color: $gray-500 $gray-700 $nav-tabs-link-active-bg; // $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
+
+
+
+// // Navbar
+
+// $navbar-dark-color: $gray-100; // rgba($white, .5) !default;
+// $navbar-dark-hover-color: $info; // rgba($white, .75) !default;
+
+// $navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$white}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+
+// $navbar-light-color: transparent; // rgba($black, .5) !default;
+$navbar-light-toggler-border-color: transparent;
+// $navbar-light-hover-color: $indigo; // rgba($black, .7) !default;
+// $navbar-light-active-color: $gray-900; // rgba($black, .9) !default;
+// $navbar-light-disabled-color: rgba($gray-900, .5); // rgba($black, .3) !default;
+$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$gray-300}' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
+
+$transition-base: all .2s linear;
+$transition-collapse: none;
+
+$toast-background-color: $white;
+$toast-header-border-color: transparent;
+$toast-border-color: transparent;
+// // Dropdowns
+// //
+// // Dropdown menu container and contents.
+
+// $dropdown-link-active-color: $black; // $component-active-color !default
+// $dropdown-link-active-bg: transparent; // $component-active-bg !default;
+
+$dropdown-link-hover-bg: $cyan;
+
+// // Pagination
+// //...
+
+
+
+// // Jumbotron
+
+// $jumbotron-bg: $gray-100; // $gray-200 !default;
+
+
+
+// // Cards
+// // ...
+
+
+
+// // Tooltips
+// // ...
+
+
+
+// // Popovers
+// // ...
+
+
+
+// // Toasts
+// // ...
+
+
+
+// // Badges
+// // ...
+
+
+
+// // Modals
+
+// $modal-dialog-margin: .5rem; // duplicate
+// $modal-content-border-width: 0; // duplicate
+
+// $modal-header-padding: 1rem; // $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+
+
+
+// // Alerts
+// //
+// // Define alert colors, border radius, and padding.
+
+// $alert-bg-level: 3;
+// $alert-border-level: 3;
+// $alert-color-level: 1;
+
+// // Progress bars
+// // ...
+
+
+
+// // List group
+// // ... 
+
+
+
+// // Image thumbnails
+// // ...
+
+
+
+// // Figures
+// // ...
+
+
+
+// // Breadcrumbs
+// // ...
+
+
+
+// // Carousel
+
+// $carousel-control-color: $gray-200; // $white !default;
+// $carousel-control-width: $font-size-base * 2.5; //  15%;
+// $carousel-control-opacity: 1; // .5
+// $carousel-caption-color: $black;
+
+// // Spinners
+// // ... 
+
+
+
+// // Close
+// // ...
+$close-color: $gray-300;
+
+
+// // Code
+// // ...
+
+
+
+// // Utilities
+// // ...
+
+
+
+// // Printing
+// // ...
+
+
+
+// // TODO: REFACTOR DEPRECATED
+
+// $input-height-inner-sm:                 ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default; // deprecated in 4.3.1
+$input-height-inner-sm: inherit;
+// $input-height-inner-lg:                 ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default; // deprecated in 4.3.1
+$input-height-inner-lg: inherit;
+// // $input-default-width: 100%; // deprecated in 4.3.1
+
+
+
+
+// // Import for the basic bootstrap functions and variables
+// // TODO: Move it out of here
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// // Import for the custom variables
+@import "variables-custom";

@@ -1,0 +1,98 @@
+.component-step {
+    padding: 2rem 6rem;
+    user-select: none;
+
+    .component-step-collapse-button {
+        text-align: right;
+        display: block;
+        color: $gray-300;
+        text-decoration: none;
+        position: relative;
+        padding-right: 1rem;
+        cursor: pointer;
+        &:after {
+            content: '\f107';
+            position: absolute;
+            top: 2px;
+            right: 0;
+            width: 1rem;
+            height: 1rem;
+            font-family: $font-family-icon;
+        }
+        &.active {
+            &:after {
+                content: '\f106';
+            }
+        }
+    }
+
+    .component-step-title {
+        font-size: 2.25rem;
+        color: $gray-300;
+        text-align: center;
+        font-weight: $font-weight-bold;
+        font-family: $font-family-monospace;
+    }
+
+    .component-step-header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .component-step-pre-title {
+        width: 100%;
+        color: $indigo;
+        text-align: center;
+    }
+
+    .component-step-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .component-step-read-only {
+        margin: auto;
+        max-width: 470px;
+    }
+
+    .component-step-list {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .component-step-photo {
+        border-radius: $border-radius-lg;
+        display: block;
+        overflow: hidden;
+        margin: auto;
+        width: 167px;
+    }
+
+    .component-step-dropdown {
+        margin: auto;
+        max-width: 280px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+        width: auto;
+
+        .component-step-pre-title {
+            order: 1;
+        }
+
+        .component-step-info {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.component-add-document {
+    margin-top: 2rem;
+    .component-step {
+        padding: inherit;
+    }
+    &.visible {
+        display: none;
+    }
+}

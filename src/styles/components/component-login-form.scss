@@ -1,0 +1,133 @@
+component-login-form,
+.login-form {
+    user-select: none;
+    max-width: 550px;
+    margin: auto;
+
+    .login-form-title {
+        font-size: 48px;
+        color: $gray-600;
+        text-align: center;
+        font-weight: $font-weight-bold;
+        margin-bottom: 1rem;
+    }
+
+    .login-form-info {
+        text-align: center;
+        font-weight: normal;
+    }
+
+    .login-form-telephon {
+        text-align: center;
+        user-select: initial;
+
+        .login-form-telephon-number {
+            position: relative;
+            padding-left: 2rem;
+
+            &:hover,
+            &:link,
+            &:visited,
+            &:focus {
+                color: $indigo;
+                text-decoration: none;
+            }
+
+            &:after {
+                position: absolute;
+                top: .5rem;
+                left: 0;
+                content: "\f3cf";
+                font-weight: 900;
+                font-family: $font-family-icon;
+                margin: auto;
+            }
+        }
+
+
+    }
+
+    .login-form-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+
+        .login-form-country {
+            width: 80px;
+            margin-right: 1rem;
+        }
+
+        .login-form-input {
+            width: calc(100% - 235px);
+            margin-right: 1rem; 
+        }
+
+        .login-form-button {
+            width: 122px;
+        }
+    }
+
+    .login-form-agree {
+        color: $gray-600;
+        font-weight: normal;
+        width: 100%;
+        margin-top: 1rem;
+
+        .login-form-agree-link {
+            color: $gray-600;
+            font-weight: $font-weight-bold;
+        }
+        .login-form-label {
+            font-size: 0.75rem;
+        }
+    }
+    &.login-form-verifying { 
+        .login-form-input {
+            width: calc(100% - 140px);
+        } 
+    }
+}
+
+
+@include media-breakpoint-down(sm) {
+
+    component-login-form,
+    .login-form {
+
+        &.login-form-verifying {
+            .login-form-block { 
+                .login-form-input {
+                    width: 100%;
+                } 
+                .login-form-agree { 
+                    text-align: center; 
+                }
+            }
+        }
+        .login-form-title {
+            font-size: 36px; 
+        }
+        .login-form-info {
+            font-size: $font-size-sm;
+        } 
+
+        .login-form-block {
+            flex-wrap: wrap;
+            .login-form-button {
+                margin-top: 1rem;
+                width: 100%;
+                order: 1;
+            }
+            .login-form-input {
+                margin-right: 0;
+                width: calc(100% - 100px);
+            }
+            .login-form-agree {  
+                margin-bottom: 2rem;
+            }
+        }
+ 
+    }
+}

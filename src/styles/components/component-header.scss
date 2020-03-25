@@ -1,0 +1,23 @@
+component-header,
+.header { 
+    height: $header-height; 
+    z-index: 10;
+    position: relative; 
+    .input-group {
+        position: initial;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    component-header,
+    .header { 
+        height: 75px;
+        .logo {
+            max-width: 122px;
+            .logo-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

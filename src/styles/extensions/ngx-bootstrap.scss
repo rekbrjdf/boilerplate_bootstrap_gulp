@@ -1,0 +1,7 @@
+/*
+* Fix z-index position, when we append dropdown to the body 
+* https://github.com/valor-software/ngx-bootstrap/issues/5144
+*/
+bs-dropdown-container {
+    z-index: $zindex-dropdown;
+}

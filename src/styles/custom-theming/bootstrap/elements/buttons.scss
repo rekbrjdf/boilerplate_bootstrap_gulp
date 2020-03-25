@@ -1,0 +1,271 @@
+// @import "../../../../node_modules/bootstrap/scss/buttons";
+
+// .btn {
+//   font-size: $btn-font-size;
+//   font-family: $font-family-monospace;
+//   &:active, &:focus{
+//     outline: none;
+//     box-shadow: none;
+//   }
+// }
+
+// // .btn.btn-primary {
+// //   &:not(:disabled):not(.disabled):active,
+// //   &:not(:disabled):not(.disabled).active {
+// //     color: $indigo !important;
+// //   }
+// // }
+
+.btn-group {
+  &-vertical {
+    & button {
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+// $enable-shadows: false;
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  font-size: $btn-font-size;
+  font-family: $font-family-monospace;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  &.btn-lg {
+    height: $input-height-lg;
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    @include box-shadow(none);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+    :hover {
+      opacity: $btn-disabled-opacity;
+    }
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    background-image: none;
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color,
+$value in $theme-colors {
+
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+    // @include hover { outline: none; box-shadow: none; }
+  }
+}
+
+//
+// Primary button gradient color
+// 
+
+.btn-primary {
+
+  background: linear-gradient(89.92deg, $primary 0.02%, $secondary 99.98%) !important;
+  color: $white;
+  border: none;
+  transition: $transition-base;
+  height: $input-height;
+
+  &.btn-lg {
+    height: $input-height-lg;
+  }
+  @include hover-focus {
+    color: $white;
+    opacity: $btn-disabled-opacity;
+  }
+}
+
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $gray-600; //$link-color
+  background-color: transparent;
+
+  @include hover {
+    color: $gray-800; // $link-hover-color
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  @include hover-focus{
+    text-decoration: none;//$link-hover-decoration;
+    border-color: transparent;
+    @include box-shadow(none);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+@include media-breakpoint-down(sm) {
+  .btn {
+    &.btn-lg {
+      height: $input-height;
+      font-size: 1rem;
+
+    }
+  }
+  
+  .btn-group-lg>.btn-primary.btn {
+    height: $input-height;
+    font-size: 0.86rem; 
+  }
+
+  .btn-primary.btn-lg {
+    height: $input-height;
+    font-size: 1rem;
+  }
+  .input-group-append {
+    .btn-primary.btn {
+      height: $input-height;
+      font-size: 0.86rem; 
+    }
+  }
+}
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  +.btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.btn-outline-primary {
+  &:after {
+    content: "";
+    opacity: 0;
+    background-color: transparent;
+    transition: opacity .5s ease-in-out; 
+  }
+  &:not(:disabled):not(.disabled):active,
+  &:hover,
+  &:active {
+    background: transparent;
+    border-color: transparent;
+    position: relative;
+    transition: color .15s ease-in-out;
+    transition:  border-color .15s ease-in-out; 
+    z-index: 1;
+    &:after {
+      content: "";
+      position: absolute;
+      width: auto;
+      height: auto;
+      top: -0.125rem;
+      bottom: -.125rem;
+      right: -.125rem;
+      left: -.125rem;
+      border-radius: .25rem;
+      color: #fff;
+      background: linear-gradient(89.92deg, $primary 0.02%, $secondary 99.98%);
+      border: none;
+      padding: ($btn-padding-y + 0.125rem) ($btn-padding-x + 0.125rem);
+      opacity: 1;
+      z-index: -1;
+      transition: opacity .15s ease-in-out;
+    }
+    
+  }
+}

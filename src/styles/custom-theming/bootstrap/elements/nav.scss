@@ -1,0 +1,344 @@
+// Base class
+//
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.navbar {
+  position: initial;
+  padding: 0 1rem;
+
+  &.bg-light {
+    background-color: $white !important;
+  }
+}
+
+
+// .nav-item {
+//   .dropdown-menu {
+//     background-color: $navbar-dropdown-background-color;
+//     position: relative;
+//   }
+// }
+// .bg-light,
+// .bg-dark {
+//   & .nav-item {
+//     & .dropdown-menu {
+//       & .dropdown-item {
+//         position: relative;
+//         text-align: center;
+//         color: $light;
+
+//         &:hover,
+//         &:active,
+//         &:focus {
+//           background: transparent;
+//           color: $gray-300;
+//         }
+
+//       }
+//     }
+//   }
+// }
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-monospace;
+  color: $gray-600;
+
+  &.active {
+    color: $teal;
+  }
+
+  &:hover {
+    color: $teal;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    font-family: $font-family-monospace;
+
+    &.disabled {
+      // color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    //   @include border-top-radius(0);
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+
+  .nav-link.active,
+  .show>.nav-link {
+    color: $nav-pills-link-active-color;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  >.tab-pane {
+    display: none;
+  }
+
+  >.active {
+    display: block;
+  }
+}
+
+// TODO: refactoring
+.custom-navbar {
+  &.navbar-light {
+    padding: 0;
+  }
+.navbar-nav {
+  padding: 1rem 2rem;
+  background: $white;
+
+}
+  // position: relative;
+  .navbar-collapse {
+    position: absolute;
+    width: 0;
+    top: 79px;
+    left: 0; 
+    overflow: hidden;
+    opacity: 1;
+    flex-basis: initial;
+    flex-grow: initial;
+    transition: width .5s ease-out;
+    background: $white;
+    box-shadow: $jumbotron-box-shadow;
+    z-index: 1;
+
+
+    &.collapse:not(.show) {
+      display: block;
+    }
+
+    &.fade {
+      transition: width .2s ease-out;
+      background: $white;
+
+      &:not(.show) {
+        opacity: 1;
+      }
+    }
+
+    &.show { 
+      width: 18.75rem; 
+      margin: 0;
+      opacity: 1;
+      z-index: 1;
+      min-height: 435px;
+      height: auto;
+      bottom: 0;
+      overflow: hidden;
+      box-shadow: $jumbotron-box-shadow;
+      transition: width .2s ease-out;
+      background: $white;
+    }
+
+    &.collapsing { 
+      height: auto;
+      overflow: hidden;
+      opacity: 1;
+      transition: width 0.2s ease-out;
+      background: $white;
+    }
+  }
+
+
+
+  .navbar-toggler {
+    outline: none;
+
+    .navbar-toggler-icon {
+      background-image: escape-svg($custom-dropdown-indicator-close);
+    }
+
+    &.collapsed {
+      .navbar-toggler-icon {
+        background-image: escape-svg($navbar-light-toggler-icon-bg);
+      }
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      &:after {
+        display: none;
+      }
+    }
+
+    .dropdown-menu {
+      border: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+
+      .dropdown-item {
+        padding: 0 1rem .5rem 1rem;
+        font-size: $font-size-base;
+        font-weight: normal;
+        color: $gray-600;
+        &.dropdown-on-item,
+        &:active,
+        &:focus,
+        &:hover {
+          color: $teal;
+          background-color: transparent;
+        }
+      }
+
+    }
+  }
+
+
+  .nav-icon {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    outline-style: none;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 4px;
+      width: 100%;
+      background: $white;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 11px;
+      }
+
+      &:nth-child(4) {
+        top: 22px;
+      }
+    }
+  }
+
+
+  .nav-icon.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+  .nav-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .nav-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .nav-icon.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+
+}
+
+@include media-breakpoint-down(sm) {
+  .custom-navbar {
+    .navbar-toggler {
+      padding: .55rem 0 .15rem 0.75rem;
+    }
+
+    .nav-icon {
+      width: 1.5rem;
+      height: 1rem;
+
+      span {
+        height: 3px;
+      }
+
+      span:nth-child(2),
+      span:nth-child(3) {
+        top: 9px;
+      }
+
+      span:nth-child(4) {
+        top: 18px;
+      }
+    }
+  }
+}

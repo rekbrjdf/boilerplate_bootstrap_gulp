@@ -1,0 +1,91 @@
+// Custom input number 
+
+component-input-number,
+.input-number {
+  position: relative;
+
+  input[type="number"] {
+    position: relative;
+
+    &:focus {
+      // background: $white $custom-input-number-indicator-focus no-repeat 94% 50%;
+    }
+   
+    &:disabled {
+      background: $gray-200 $custom-input-number-indicator-disabled no-repeat 94% 50%;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        background: none;
+      }
+    }
+  }
+
+  @supports (-ms-ime-align: auto) {
+    input[type="number"]:disabled {
+      background: $gray-200;
+    }
+  }
+
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    &:after {
+      display: none;
+    }
+
+    &:before {
+      content: "\f0dc";
+      font-size: 1rem;
+      position: absolute;
+      font-weight: $font-weight-bold;
+      color: $gray-300;
+
+      margin: auto;
+      font-family: $font-family-icon;
+      z-index: 1;
+      height: 23px;
+      width: auto;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      bottom: 0;
+    }
+  }
+
+  //  Spin Buttons (just Chrome)
+  @supports (-ms-ime-align: auto) {
+    &:after {
+      content: "";
+      background: $custom-input-number-indicator no-repeat center;
+      width: 0.7rem;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      right: 1rem;
+      bottom: 0; 
+    } 
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    background: $custom-input-number-indicator no-repeat center;
+    width: 0.7rem;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0.8425rem;
+    bottom: 0;
+
+    &:disabled {
+      background: $custom-input-number-indicator-disabled no-repeat center;
+    }
+
+  } 
+  input[type="number"]:focus::-webkit-outer-spin-button,
+  input[type="number"]:focus::-webkit-inner-spin-button {
+    background: $white $custom-input-number-indicator-focus no-repeat center;
+  }
+
+}

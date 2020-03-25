@@ -1,0 +1,11 @@
+<footer class="footer bg-dark py-3">
+    <div class="container text-light">
+        <span>Finflow</span> <span id="year"></span>
+    </div>
+</footer>
+
+<script>
+    var date = new Date;
+    var year = date.getFullYear().toString();
+    document.querySelector("#year").textContent = year;
+</script>

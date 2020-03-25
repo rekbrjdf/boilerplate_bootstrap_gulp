@@ -1,0 +1,17 @@
+component-custom-radio,
+.custom-radio {
+    line-height: 1.7;
+    & .custom-control-label {
+        font-size: $font-size-base;
+        font-family: $font-family-monospace;
+        padding-right: $spacer;
+        font-weight: $font-weight-bold;
+        white-space: nowrap;
+    }
+    &.custom-control-lg .custom-control-label {
+        font-size: $font-size-lg;
+    }
+    &.custom-control-sm .custom-control-label {
+        font-size: $font-size-sm;
+    }
+}

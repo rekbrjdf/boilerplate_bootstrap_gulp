@@ -1,0 +1,12 @@
+<!-- component-check-favorite begin -->
+<div class="check-favorite js-star">
+    <div class="check-favorite-icon"></div>
+</div>
+<!-- component-check-favorite end -->
+<script>
+    $(document).ready(function () {
+        $('.js-star').click(function () {
+            $('.check-favorite-icon').toggleClass("active");
+        });
+    });
+</script>

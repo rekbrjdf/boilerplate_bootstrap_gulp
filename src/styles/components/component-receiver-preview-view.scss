@@ -1,0 +1,98 @@
+component-receiver-preview-view,
+.receiver-preview-view {
+    display: none; 
+    &.active {
+        display: block;
+    } 
+    .receiver-preview-view-close {
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        .receiver-preview-view-close-icon {
+            &:after {
+                content: "\f00d";
+                font-family: $font-family-icon;
+                font-style: normal;
+            }
+        }
+    }
+    .receiver-preview-view-buttons-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .receiver-preview-view-buttons {
+        .receiver-preview-view-button {
+            &:after {
+                padding-left: 10px;
+            }
+        }
+    }
+    .receiver-preview-view-text {
+        font-size: 1.125rem;
+
+        font-family: $font-family-sans-serif;
+    }
+    .receiver-preview-view-wrapper {
+        position: relative;
+    }
+    .receiver-preview-view-item {
+        display: flex;
+        justify-content: space-between;
+        .component-step {
+            padding: 0;
+            width: 100%;
+        }
+    }
+    .receiver-preview-view-avatar-wrapper {
+        margin-right: 2rem;
+        margin-top: .4rem;
+    }
+    .receiver-preview-view-avatar {
+        width: 6.375rem;
+        height: 6.375rem;
+        margin: auto 0;
+        border-radius: 50px; 
+        background: $teal;
+        border: $border-width solid $teal; 
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .receiver-preview-view-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .receiver-preview-view-name {
+            font-size: 2.25rem;
+            color: $white;
+            margin: 0;
+        }
+
+        .receiver-preview-view-img+.receiver-preview-view-name {
+            display: none;
+        }
+    }
+}
+.receiver-preview-view-active {
+    .receiver-preview-view {
+        display: block;
+    }
+}
+    @include media-breakpoint-down(sm) {
+        component-receiver-preview-view,
+        .receiver-preview-view {
+            .receiver-preview-view-item {
+                display: block;
+            }
+            .receiver-preview-view-foto {
+                margin-bottom: 1rem; 
+            }
+            .receiver-preview-view-close { 
+                right: 1rem;
+            }
+        }
+    }

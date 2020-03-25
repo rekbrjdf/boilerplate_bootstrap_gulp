@@ -1,0 +1,86 @@
+component-receiver-preview-edit,
+.receiver-preview-edit {
+    display: none; 
+    &.active {
+        display: block;
+    }
+    .receiver-preview-edit-close {
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+    .receiver-preview-edit-buttons-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .receiver-preview-edit-buttons {
+        .receiver-preview-edit-button {
+            &:after {
+                padding-left: 10px;
+            }
+        }
+    }
+    .receiver-preview-edit-wrapper {
+        position: relative;
+    }
+    .receiver-preview-edit-item {
+        display: flex;
+        justify-content: space-between;
+        .component-step {
+            padding: 0;
+            width: 100%;
+        }
+    }
+    .receiver-preview-edit-avatar-wrapper {
+        margin-right: 2rem;
+        margin-top: .4rem;
+    }
+    .receiver-preview-edit-avatar {
+        width: 6.375rem;
+        height: 6.375rem;
+        margin: auto 0;
+        border-radius: 50px; 
+        background: $teal;
+        border: $border-width solid $teal; 
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .receiver-preview-edit-img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .receiver-preview-edit-name {
+            font-size: 2.25rem;
+            color: $white;
+            margin: 0;
+        }
+
+        .receiver-preview-edit-img+.receiver-preview-edit-name {
+            display: none;
+        }
+    }
+}
+.receiver-preview-edit-active {
+    .receiver-preview-edit {
+        display: block;
+    }
+}
+    @include media-breakpoint-down(sm) {
+        component-receiver-preview-edit,
+        .receiver-preview-edit {
+            .receiver-preview-edit-item {
+                display: block;
+            }
+            .receiver-preview-edit-foto {
+                margin-bottom: 1rem; 
+            }
+            .receiver-preview-edit-close { 
+                right: 1rem;
+            }
+        }
+    }

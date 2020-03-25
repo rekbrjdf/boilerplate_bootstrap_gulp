@@ -1,0 +1,53 @@
+component-custom-modal,
+.custom-modal {
+    text-align: center;
+    user-select: none;
+    .modal-header {
+        padding: .5rem 1rem 0 1rem;
+        border-top: 0.5625rem solid $teal;
+        border-bottom: none; 
+    }
+    .modal-body { 
+        padding-top: 0;
+        max-width: 320px;
+        margin: auto;
+        width: 100%;
+        .modal-body-icon {
+            color: $teal;
+        }
+    }
+    .custom-modal-avatar {
+        width: 6.375rem;
+        height: 6.375rem;
+        margin: auto;
+        background: $gray-100;
+        border-radius: 50px;
+        border: $border-width solid $teal;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .custom-modal-img {
+            width: 100%;
+            height: 100%;
+        }
+        .custom-modal-name {
+            font-size: 2.25rem;
+            color: $teal;
+            margin: 0;
+        }
+        .custom-modal-img + .custom-modal-name {
+            display: none;
+        }
+    }
+    .custom-modal-login {
+        font-weight: $font-weight-bold;
+        color: $indigo;
+    }
+}
+// .modal-header {
+//     .heading-display-3 {
+//         color: $gray-300;
+//     }
+// }

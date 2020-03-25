@@ -1,0 +1,52 @@
+.popover-actions {
+    display: flex;
+    background: $white;
+    right: 1rem;
+    align-items: center;
+ 
+
+    .popover-actions-arrow {
+        cursor: pointer;
+        align-items: center;
+        align-self: stretch;
+        display: flex;
+        padding: 1rem 0.5rem;
+
+    }
+    .popover-actions-button-wrapper {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .btn {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .popover-actions-button-text {
+            max-width: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: $transition-base;
+            user-select: none;
+
+            &.active {
+                visibility: visible;
+                opacity: 1;
+                max-width: 200px;
+            }
+        }
+    }
+    .popover-actions-angle-right {
+        &:before {
+            content: "\f105";
+            font-family: $font-family-icon;
+        }
+        
+        &.active {
+            &:before {
+                content: "\f104";
+            }
+        }
+    }
+}

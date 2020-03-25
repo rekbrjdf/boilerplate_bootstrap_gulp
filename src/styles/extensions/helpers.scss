@@ -1,0 +1,30 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    &.underline {
+        border-bottom: $border-width solid $gray-900;
+        width: 100%;
+    }
+}
+
+.line-height-normal {
+    line-height: inherit !important;
+}
+
+.underline-row {
+    border-bottom: $border-width solid $gray-700;
+}
+
+.fit-content {
+    max-width: fit-content;
+    min-width: fit-content;
+}

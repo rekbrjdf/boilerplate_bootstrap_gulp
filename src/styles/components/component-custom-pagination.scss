@@ -1,0 +1,45 @@
+component-custom-pagination,
+.custom-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .custom-pagination-list {
+       margin-bottom: 0;
+    }
+    .custom-pagination-list-arraw-left {
+        &:after {
+            content: "\f104";
+            font-style: normal;
+            font-family: $font-family-icon;
+        }
+    }
+    .custom-pagination-list-arraw-right {
+        &:after {
+            content: "\f105";
+            font-style: normal;
+            font-family: $font-family-icon;
+        }
+    }
+    .navigation-all {
+        display: flex;
+        align-items: center;
+        color: $gray-300; 
+        font-weight: $font-weight-light; 
+    }
+    .dropdown-toggle {
+        font-weight: $font-weight-light;
+    }
+    .page-link {
+        color: $gray-300;
+        border: none;
+        padding: .5rem .5rem;
+        font-weight: $font-weight-light;
+        .disabled {
+            color: $gray-500;
+        }
+        &:hover {
+            color: $gray-500;
+            background: transparent;
+        }
+    }
+}

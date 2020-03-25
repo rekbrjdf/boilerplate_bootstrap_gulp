@@ -1,0 +1,12 @@
+<div>
+    <button type="button" class="js-eye-slash btn btn-link btn-eye-slash p-0"></button>
+    <button type="button" class="btn btn-link btn-refresh p-0"></button>
+    <button type="button" class="btn btn-link btn-trash p-0"></button>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.js-eye-slash').click(function () {
+            $('.js-eye-slash').toggleClass("active");
+        });
+    });
+</script>

@@ -1,0 +1,39 @@
+component-show-more-block,
+.show-more-block {
+    .show-more-block-wrapper {
+        max-height: 0;
+        transition: max-height 0.4s ease-out;
+        overflow: hidden;
+    }
+
+    .show-more-block-wrapper.visible {
+        max-height: 1000px;
+        transition: max-height 0.4s ease-in;
+    }
+
+    .show-more-button {
+        text-align: right;
+        display: block;
+        color: $gray-300;
+        text-decoration: none;
+        position: relative;
+        padding-right: 1rem;
+        cursor: pointer;
+
+        &:after {
+            content: '\f107';
+            position: absolute;
+            top: 2px;
+            right: 0;
+            width: 1rem;
+            height: 1rem;
+            font-family: $font-family-icon;
+        }
+
+        &.active {
+            &:after {
+                content: '\f106';
+            }
+        }
+    }
+}

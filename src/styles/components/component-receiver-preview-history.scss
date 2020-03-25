@@ -1,0 +1,195 @@
+component-receiver-preview-history,
+.receiver-preview-history {
+    display: none;
+    &.receiver-preview-history-component {
+        display: block;
+        &.active {
+            display: none;
+        }
+    }
+    &.active {
+        display: block;
+    }
+    .receiver-preview-history-wrapper {
+        padding: 0.5rem 1rem; 
+    }
+    .receiver-preview-history-item {
+        width: 100%;
+    }
+
+
+    .receiver-preview-history-close {
+        cursor: pointer;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+
+        .receiver-preview-history-close-icon {
+            &:after {
+                content: "\f00d";
+                font-family: $font-family-icon;
+                font-style: normal;
+            }
+        }
+    }
+    .receiver-preview-history-col {
+        padding: .5rem;
+        vertical-align: top;
+    }
+
+    .receiver-preview-history-row {
+        
+        &:last-child {
+            .receiver-preview-history-col {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .receiver-preview-history-buttons-wrapper {
+        display: flex;
+        // justify-content: flex-end;
+        align-items: center;
+
+        .receiver-preview-history-link {
+            cursor: pointer;
+        }
+    }
+
+
+    .receiver-preview-history-table {
+        border-top: $border-width solid $gray-300;
+        border-bottom: $border-width solid $gray-300;
+
+        width: 100%;
+    }
+
+    .receiver-preview-history-flag {
+        padding-top: 30px;
+        width: 50px;
+
+        .receiver-preview-history-flag-img {
+            box-shadow: $jumbotron-box-shadow;
+        }
+    }
+
+    .receiver-preview-history-amount {
+        .receiver-preview-history-amount-text {
+            color: $teal;
+        }
+    }
+
+    .receiver-preview-history-button {
+        &:after {
+            padding-left: 10px;
+        }
+    }
+
+    .receiver-preview-history-check {
+        padding-top: 32px;
+        text-align: center;
+    }
+
+    .receiver-preview-history-button-preview {
+        &.active {
+            &:after {
+                content: "\f06e";
+            }
+        }
+    }
+
+    .receiver-preview-history-block {
+        display: none;
+
+        &.active {
+            display: table-row;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    component-receiver-preview-history,
+    .receiver-preview-history {
+
+
+        .receiver-preview-history-table-wrapper {
+            position: relative;
+        }
+
+        .receiver-preview-history-row {
+            display: block;
+            position: relative;
+            border-top: $border-width solid $gray-300;
+            padding: 1rem .5rem;
+
+            &:first-child {
+                border-top: none;
+            }
+
+        }
+
+        .receiver-preview-history-col {
+            display: block;
+            padding: 0 .5rem;
+
+            // &.receiver-preview-history-check {
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            // }
+            &.receiver-preview-history-date {
+                display: inline-block;
+                width: 35%;
+
+                .heading-display-5 {
+                    margin-top: 5px;
+                }
+            }
+
+            &.receiver-preview-history-receiver {
+                display: inline-block;
+                width: 63%;
+            }
+
+            &.receiver-preview-history-flag {
+                padding-top: 24px;
+                width: 35%;
+                display: inline-block;
+            }
+
+            &.receiver-preview-history-direction {
+                display: inline-block;
+                width: 63%;
+            }
+
+            &.receiver-preview-history-check {
+                padding-top: 9px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            &.receiver-preview-history-amount {
+                width: 35%;
+                display: inline-block;
+            }
+
+            &.receiver-preview-history-button {
+                width: 63%;
+                display: inline-block;
+                padding-top: 15px;
+            }
+        }
+
+        .receiver-preview-history-block {
+            display: none;
+            padding: 0 .5rem 1rem .5rem;
+            border-top: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}

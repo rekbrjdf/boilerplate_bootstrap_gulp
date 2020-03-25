@@ -1,0 +1,98 @@
+component-nav-tabs,
+.nav-tabs {
+    justify-content: flex-start;
+    // border: none;
+
+    &.nav-tabs-light {
+        .tab-content {
+            box-shadow: $jumbotron-box-shadow;
+            background: $white;
+        }
+        .nav {
+            border-bottom: none;
+        } 
+        & .nav-item {
+            .nav-link {
+                padding-bottom: 0.3rem;
+                &:not(.active) {
+                    &:hover {
+                        border-color: transparent;
+                    } 
+                }
+                &.active {
+                    border-color: $white;
+                    box-shadow: $jumbotron-box-shadow;
+                    position: relative;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        height: 9px;
+                        width: auto;
+                        right: -5px;
+                        left: -2px;
+                        bottom: -9px;
+                        background: $white;
+                        z-index: 1;
+                    }
+                } 
+            }
+        }
+    }
+
+    .nav {
+        border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+    }
+
+    .nav-link {
+        &.active {
+            color: $black !important;
+        }
+
+        &:hover {
+            color: $black !important;
+        }
+    }
+
+    & .nav-item {
+        border-radius: $border-radius-lg;
+
+        & .nav-link {
+
+            border-top-left-radius: $border-radius-lg;
+            border-top-right-radius: $border-radius-lg;
+            color: $gray-500;
+            padding-top: .3rem;
+            padding-bottom: .1rem;
+            text-align: center;
+            height: 100% !important;
+
+            &.active {
+                border-color: $nav-tabs-border-color $nav-tabs-border-color $white; 
+                color: $primary;
+            }
+
+            &.disabled {
+                color: $gray-200 !important;
+
+                &:hover,
+                &:focus {
+                    color: $gray-200 !important;
+                }
+            }
+
+            &:not(.active):hover,
+            &:not(.active):focus {
+                color: $primary;
+                border-color: transparent transparent $blue transparent;
+            }
+
+        }
+    }
+
+
+    & .tab-content {
+        & .tab-pane {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+component-start-page,
+.start-page {
+    max-width: 1446px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: .5;
+    user-select: none;
+
+    .start-page-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .start-page-left {
+            max-width: 395px;
+            width: 100%;
+        }
+
+        .start-page-right {
+            width: calc(1445px - 345px -200px);
+            padding-left: 50px;
+        }
+
+        .start-page-title {
+            font-size: 6rem;
+            color: $teal;
+            font-family: $font-family-monospace;
+            font-weight: $font-weight-bold;
+            line-height: 1;
+        }
+
+        .start-page-info {
+            color: $gray-600;
+        }
+
+    }
+}
+
+@include media-breakpoint-down(md) {
+
+    component-start-page,
+    .start-page {
+        .start-page-wrapper { 
+            .start-page-left {
+                max-width: 50%;
+                width: 50%; 
+            }
+    
+            .start-page-right {
+                width: 50%;
+                padding-left: 20px;  
+            }
+            .start-page-info {
+                br {
+                    display: none;
+                }
+            }
+            .start-page-title {
+                font-size: 3rem; 
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    component-start-page,
+    .start-page {
+        .start-page-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            .start-page-left {
+                max-width: 345px;
+                width: 100%;
+                margin: auto;
+            }
+    
+            .start-page-right {
+                max-width: 345px;
+                width: 100%;
+                margin: auto;
+                padding-left: 0;
+                padding-bottom: 30px;
+            }
+            .start-page-info {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,129 @@
+
+
+
+// Custom switch
+
+// $base-width-switch: 2.375rem;
+// $base-height-switch: 1.188rem;
+// $size-toggle-label: 0.8125rem;
+// $position-left-toggle-label: 0.25rem;
+// $position-top-toggle-label: 0.3125rem;
+
+component-custom-switch,
+.custom-switch {
+
+  input[type="checkbox"].checkbox-toggle {
+    visibility: hidden;
+  }
+  input {
+    &:disabled {
+      & + label.checkbox-toggle-label:before {
+        background: $gray-100;
+      }
+    }
+  }
+  
+
+  label.checkbox-toggle-label:before {
+    content: '';
+    background: $white;
+    border: $border-width solid $gray-200;
+    width: $base-width-switch;
+    height: $base-height-switch;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3.125rem;
+  }
+
+  label.checkbox-toggle-label:after {
+    content: '';
+    position: absolute;
+    left: 0.25rem;
+    top: 0.1875rem;
+    width: $size-toggle-label;
+    height: $size-toggle-label;
+    border-radius: 3.125rem;
+    background: $gray-200;
+    transition: .1s ease-in;
+  }
+
+  input.checkbox-toggle {
+    visibility: hidden;
+
+    &:checked+label.checkbox-toggle-label:after {
+      opacity: 1;
+      transform: translateX(1.063rem);
+      background: $gray-600;
+    }
+
+    &:checked+label.checkbox-toggle-label:before {
+      background: $white;
+      border: $border-width solid $gray-600;
+    }
+  }
+
+  & .custom-control {
+    max-height: $font-size-base;
+
+      label.checkbox-toggle-label:before {
+        width: $base-width-switch * 1.4;
+        height: $base-height-switch * 1.4;
+      }
+  
+      label.checkbox-toggle-label:after {
+        left: 0.1875rem * 1.4;
+        top: 0.1875rem * 1.4;
+        width: $size-toggle-label * 1.4;
+        height: $size-toggle-label * 1.4;
+      }
+  
+      input.checkbox-toggle {
+        &:checked+label.checkbox-toggle-label:after {
+          transform: translateX(1.625rem);
+        }
+      }
+
+
+    &.custom-control-lg {
+      label.checkbox-toggle-label:before {
+        width: $base-width-switch * 2;
+        height: $base-height-switch * 2;
+      }
+  
+      label.checkbox-toggle-label:after {
+        left: 0.375rem;
+        top: 0.375rem;
+        width: $size-toggle-label *2;
+        height: $size-toggle-label *2;
+      }
+  
+      input.checkbox-toggle {
+        &:checked+label.checkbox-toggle-label:after {
+          transform: translateX(2.375rem);
+        }
+      }
+    }
+  
+    &.custom-control-sm {
+      label.checkbox-toggle-label:before {
+        width: $base-width-switch;
+        height: $base-height-switch;
+      }
+  
+      label.checkbox-toggle-label:after {
+        left: 0.1875rem;
+        top: 0.1875rem;
+        width: $size-toggle-label;
+        height: $size-toggle-label;
+      }
+  
+      input.checkbox-toggle {
+        &:checked+label.checkbox-toggle-label:after {
+          transform: translateX(1.063rem);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,125 @@
+component-draft-grid,
+.draft-grid {
+    .draft-grid-col {
+        padding: .5rem;
+        vertical-align: top;
+    }
+
+    .draft-grid-row {
+        &:last-child {
+            .draft-grid-col {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .draft-grid-buttons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .draft-grid-link {
+            cursor: pointer;
+        }
+    }
+
+
+    .draft-grid-table {
+        border-top: $border-width solid $gray-300;
+        border-bottom: $border-width solid $gray-300;
+
+        width: 100%;
+    }
+
+    .draft-grid-flag {
+        padding-top: 30px;
+        width: 50px;
+
+        .draft-grid-flag-img {
+            box-shadow: $jumbotron-box-shadow;
+        }
+    }
+
+    .draft-grid-amount {
+        .draft-grid-amount-text {
+            color: $teal;
+        }
+    }
+
+    .draft-grid-button {
+        padding-top: 20px;
+    }
+
+    .draft-grid-check {
+        padding-top: 32px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    component-draft-grid,
+    .draft-grid {
+        .draft-grid-table-wrapper {
+            position: relative;
+        }
+
+        .draft-grid-row {
+            display: block;
+            position: relative;
+            border-bottom: $border-width solid $gray-300;
+            &:last-child {
+                border-bottom: none;
+            }
+
+        }
+
+        .draft-grid-col {
+            display: block;
+
+            // &.draft-grid-check {
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            // }
+            &.draft-grid-date {
+                display: inline-block;
+                width: 35%;
+
+                .heading-display-5 {
+                    margin-top: 5px;
+                }
+            }
+
+            &.draft-grid-receiver {
+                display: inline-block;
+                width: 63%;
+            }
+            
+            &.draft-grid-flag {
+                padding-top: 33px;
+                width: 35%;
+                display: inline-block;
+            }
+            &.draft-grid-direction {
+                display: inline-block;
+                width: 63%;
+            }
+
+            &.draft-grid-check {
+                padding-top: 9px;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            &.draft-grid-amount {
+                width: 35%;
+                display: inline-block;
+            }
+            &.draft-grid-button {
+                width: 63%;
+                display: inline-block;
+                padding-top: 15px;
+            }
+        } 
+    }
+}

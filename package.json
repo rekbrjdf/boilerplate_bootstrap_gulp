@@ -1,21 +1,51 @@
 {
-  "name": "nathaniscool",
-  "version": "0.1.0",
-  "description": "",
+  "name": "bpremit-online",
+  "version": "1.0.0",
+  "description": "The theme customized with Finflow",
   "main": "index.js",
   "scripts": {
+    "docs-build": "hugo --cleanDestinationDir",
+    "docs-serve": "hugo server --port 9002 --disableFastRender",
     "build": "gulp",
     "dev": "gulp watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+http://gitlab.bmservice.local/FFSW_LLP_Design/ff_bpremit_online.git"
+  },
+  "author": "Finflow",
   "keywords": [],
-  "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",
+    "flag-icon-css": "^3.4.6",
     "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-clean": "^0.4.0",
-    "gulp-watch": "^5.0.1"
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^4.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-debug": "^4.0.0",
+    "gulp-google-webfonts": "^2.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-string-replace": "^1.1.2",
+    "gulp-watch": "^5.0.1",
+    "hugo-bin": "^0.55.1",
+    "postcss-cli": "^7.1.0"
+  },
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
   }
 }

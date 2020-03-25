@@ -1,0 +1,25 @@
+@mixin alert-variant($background, $border, $color) {
+  color: $color;
+  font-size: $font-size-base * 1.1;
+  border: $border-width solid $color;
+  position: relative;
+
+  // @include gradient-bg($background);
+  &:after {
+    content: "\f06a"; 
+    position: absolute;
+    left: $alert-padding-x / 1.5;
+    top: $alert-padding-y;
+    font-size: $font-size-base * 1.1;
+    color: $color;
+    font-family: $font-family-icon; 
+  }
+
+  hr {
+    border-top-color: $color;
+  }
+
+  .alert-link {
+    color: darken($color, 5%);
+  }
+}

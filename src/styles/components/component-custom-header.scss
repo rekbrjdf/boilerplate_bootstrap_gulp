@@ -1,0 +1,87 @@
+component-custom-header,
+.custom-header {
+    background: linear-gradient(89.92deg, $primary 0.02%, $secondary 99.98%);
+    height: 79px;
+
+    .custom-header-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .custom-header-avatar {
+        width: 40px;
+        height: 40px;
+        background: $gray-100;
+        border-radius: 50px;
+        border: $border-width solid $teal;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .custom-header-img {
+            width: 100%;
+            height: 100%;
+        }
+        .custom-header-name {
+            color: $teal;
+            margin: 0;
+        }
+        .custom-header-img + .custom-header-name {
+            display: none;
+        }
+
+    }
+
+
+    .custom-header-phone {
+        .custom-header-phone-number {
+            position: relative;
+            padding-left: 2rem;
+
+            &:hover,
+            &:link,
+            &:visited,
+            &:focus {
+                color: $white;
+                text-decoration: none;
+            }
+
+            &:after {
+                position: absolute;
+                top: .1rem;
+                left: 0;
+                content: "\f3cf";
+                font-weight: 900;
+                font-family: $font-family-icon;
+                margin: auto;
+            }
+        }
+
+
+    }
+
+    .custom-header-right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+
+@include media-breakpoint-down(sm) {
+    component-custom-header,
+    .custom-header {
+        .custom-header-phone {
+            .custom-header-phone-number {
+                font-size: 1.5rem;
+                &:after {
+                    position: absolute;
+                    top: .2rem;
+                }
+            }
+        }
+    }
+}

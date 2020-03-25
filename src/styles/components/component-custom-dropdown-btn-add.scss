@@ -1,0 +1,35 @@
+.custom-dropdown-btn-add {
+    
+    .dropdown-toggle {
+        font-size: 24px;
+        color: $indigo;
+        z-index: 2;
+        padding-left: 2rem;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &:hover {
+        &:after {
+            opacity: .8; 
+        }  
+    }
+
+    &:after {
+        content: "\f055";
+        font-family: $font-family-icon;
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 33px;
+        color: $indigo;
+        z-index: 1;
+    }
+
+    &:before {
+        display: none;
+    }
+}

@@ -1,0 +1,68 @@
+<!-- coomponent-custom-header begin -->
+<div class="custom-header row">
+    <div class="col custom-header-block">
+        <div class="custom-header-left">
+            <!-- component-custom-navigation begin -->
+            <nav class="navbar custom-navbar navbar-light">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <div class="nav-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+
+            </nav>
+            <div class="custom-navbar">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdown1" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Remittance
+                            </a>
+                            <div class="dropdown-menu show" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="#">Send money</a>
+                                <a class="dropdown-item dropdown-on-item" href="#">History</a>
+                                <a class="dropdown-item" href="#">Receivers</a>
+                                <a class="dropdown-item" href="#">Drafts</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Profile
+                            </a>
+                            <div class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Personal data</a>
+                                <a class="dropdown-item" href="#">Account</a>
+                                <a class="dropdown-item" href="#">Security</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- component-custom-navigation end -->
+            <script>
+                $(document).ready(function () {
+                    $('.nav-icon').click(function () {
+                        $(this).toggleClass('open');
+                    });
+                });
+            </script>
+
+        </div>
+        <div class="custom-header-right">
+            <div class="custom-header-phone">
+                <a href="tel: +79007000000" class="h1 custom-header-phone-number heading-display-1">+44 20****5751</a>
+            </div>
+            <a href="#" class="btn btn-link btn-lg btn-sign-out pt-2 pr-0"></a>
+        </div>
+    </div>
+</div>
+<!-- coomponent-custom-header begin -->

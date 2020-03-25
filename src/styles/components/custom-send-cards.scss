@@ -1,0 +1,36 @@
+component-send-cards,
+.send-cards {
+    text-align: center;
+    .send-cards-item {
+        padding: .6rem 1rem;
+        text-align: center;
+        border-radius: $border-radius;
+        color: $teal;
+        border: $border-width solid $teal;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        &.selected {
+            background: $teal;
+            color: $white;
+            border: $border-width solid $teal;
+        }
+        &.disabled { 
+            color: $gray-100;
+            border: $border-width solid $gray-100;
+        }
+        &:hover {
+            background: $teal;
+            color: $white;
+            border: $border-width solid $teal;
+            &.disabled { 
+                background: $white;
+                color: $gray-100;
+                border: $border-width solid $gray-100;
+            }
+        }
+    }
+    .send-cards-title {
+        font-size: $font-size-base;
+        text-transform: uppercase;
+    }
+}

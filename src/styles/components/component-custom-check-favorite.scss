@@ -1,0 +1,35 @@
+custom-check-favorite,
+.check-favorite {
+    &:before {
+        cursor: pointer;
+        color: $gray-300;
+        content: "\f005";
+        font-family: $font-family-icon;
+        font-weight: $font-weight-normal;
+    }
+    &:hover {
+        &:before {
+            font-weight: 900;
+            color: $yellow; 
+         }
+    }
+    &.checked {
+        &:before {
+           font-weight: 900;
+           color: $yellow; 
+        }
+
+    }
+    &.check-favorite-lg { 
+        &:before {
+            padding: 0;
+            line-height: 1;
+            font-size: $font-size-base * 2;
+        }
+    }
+    &.check-favorite-sm { 
+        &:before {
+            font-size: $font-size-base * 1.5;
+        }
+    }
+}

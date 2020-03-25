@@ -1,0 +1,22 @@
+.popover {
+    width: 400px;
+    max-width: 400px;
+    border: none;
+    box-shadow: $popover-box-shadow;
+    color: $gray-300;
+
+    & .popover-header {
+        background-color: transparent;
+        border-bottom: none;
+        font-weight: $font-weight-bold;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+        font-size: $font-size-lg;
+        padding-left: 1rem;
+    };
+
+    & .popover-body {
+        padding: 0;
+        margin-bottom: 1rem;
+    };
+}

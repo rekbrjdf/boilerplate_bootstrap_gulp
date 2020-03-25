@@ -1,0 +1,102 @@
+component-accordion,
+.component-accordion {
+
+    .accordion,
+    .panel-group {
+
+        .card,
+        .panel.card {
+            border: none;
+            background-color: transparent;
+            border-radius: 0;
+
+            .accordion-heading button,
+            .panel-heading button {
+                font-size: $h3-font-size;
+                font-weight: $font-weight-bold;
+                position: relative;
+                white-space: inherit;
+                text-align: left;
+                padding-left: 0;
+                // color: $gray-500;
+                text-decoration: none;
+                box-shadow: none;
+            }
+
+            .panel-heading,
+            .card-header {
+                border-radius: 0;
+                background-color: transparent;
+                border-bottom: none;
+
+                .accordion-heading,
+                .panel-title,
+                .accordion-toggle {
+
+                    & *:focus,
+                    & *:hover,
+                    & *:active {
+                        text-decoration: none !important;
+                    }
+                }
+
+                .accordion-toggle {
+
+                    & button[aria-expanded="true"],
+                    &[aria-expanded="true"] button {
+
+                        color: $gray-600;
+
+                        &::after {
+                            content: "";
+                            font-size: $ff-component-accordion-symbol-size;
+                            font-weight: $font-weight-light;
+                            position: absolute;
+                            right: -1.125rem;
+                            bottom: 1.4rem;
+                            line-height: .5;
+                            width: 1.188rem;
+                            height: 1px;
+                            background: $gray-600;
+                        }
+
+                    }
+
+                    & button[aria-expanded="false"],
+                    &[aria-expanded="false"] button {
+                        color: $gray-600;
+
+                        &::after {
+                            content: "+";
+                            font-size: $ff-component-accordion-symbol-size * 0.8;
+                            font-weight: $font-weight-light;
+                            position: absolute;
+                            right: -20px;
+                            bottom: .9rem;
+                            line-height: .5;
+                            // transition: $transition-base;
+                        }
+
+                        &:hover {
+                            &::after {
+                                content: "+";
+                                // bottom: 30%;
+                                // transform: rotate(180deg);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        & .panel-open {
+
+            .accordion-heading button,
+            .panel-heading button {
+                // color: $gray-900 !important;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}

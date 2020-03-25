@@ -1,0 +1,152 @@
+component-custom-input-label,
+.custom-input-label {
+    position: relative;
+    color: $input-color;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    @include border-radius($input-border-radius);
+    overflow: hidden;
+
+    .form-label {
+        position: absolute;
+        left: $input-padding-x;
+        right: $input-padding-x;
+        top: 7px;
+        font-size: $font-size-base;
+        font-weight: $input-font-weight;
+        color: $input-placeholder-color;
+        z-index: 10;
+        transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+
+    .form-control {
+        position: relative;
+        background: transparent;
+        border: none;
+        z-index: 11;
+    }
+
+    &.focused {
+        background-color: transparent;
+        border: $input-border-width solid transparent;
+
+        .form-label {
+            transform: translateY(-40%);
+            font-size: .75rem;
+            z-index: 12;
+        }
+
+        .form-control {
+            position: relative;
+            padding: .875rem $input-padding-x .375rem $input-padding-x;
+            background-color: $input-focus-bg;
+            border: $input-border-width solid $input-focus-placeholder-color;
+            z-index: 10;
+        }
+    }
+
+    &.custom-input-label-sm {
+        .form-label {
+            top: 7px;
+            font-size: $font-size-sm;
+        }
+
+        &.focused {
+            .form-label {
+                font-size: .75rem;
+            }
+        }
+    }
+
+    &.custom-input-label-lg {
+        .form-label {
+
+            top: 10px;
+            font-size: $font-size-lg;
+        }
+
+        &.focused {
+            .form-label {
+                font-size: .875rem;
+            }
+        }
+    }
+}
+
+
+.custom-input {
+    position: relative;
+    color: $input-color;
+    overflow: hidden;
+
+    &.form-group {
+        position: relative;
+    }
+
+    .form-label {
+        position: absolute;
+        left: $input-padding-x;
+        right: $input-padding-x;
+        top: 7px;
+        font-size: $font-size-base;
+        font-weight: $input-font-weight;
+        color: $input-placeholder-color;
+        z-index: 10;
+        transition: transform 150ms ease-out, font-size 150ms ease-out;
+    }
+
+    .form-control {
+        padding: .875rem $input-padding-x .375rem $input-padding-x;
+    }
+
+    &.custom-input-label {
+        .form-label {
+            left: .75rem;
+            top: 7px;
+            font-size: $font-size-base;
+        }
+    }
+
+    &.custom-input-label-lg {
+        .form-label {
+            top: 10px;
+            font-size: $font-size-lg;
+        }
+    }
+
+    &.custom-input-label-sm {
+        .form-label {
+            top: 7px;
+            font-size: $font-size-sm;
+        }
+    }
+
+    .form-control:valid+label,
+    .form-control:focus+label {
+        &.form-label {
+            top: 2px;
+            font-size: .675rem;
+        }
+    }
+
+    .form-control-lg:valid+label,
+    .form-control-lg:focus+label {
+        &.form-label {
+            top: 2px;
+            font-size: .875rem;
+        }
+    }
+
+    .form-control-sm:valid+label,
+    .form-control-sm:focus+label {
+        &.form-label {
+            top: 0px;
+            left: .85rem;
+            font-size: .55rem;
+        }
+    }
+
+
+
+}

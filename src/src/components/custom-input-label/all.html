@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        //= chunks/theme-name.html
+        - Label input
+    </title>
+    //= chunks/head.html
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h2>Label input</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <h4>sm:</h4>
+                //= components/custom-input-label/component-custom-input-label-sm.html
+            </div>
+            <div class="col-4">
+                <h4>default:</h4>
+                //= components/custom-input-label/component-custom-input-label.html
+            </div>
+            <div class="col-4">
+                <h4>lg:</h4>
+                //= components/custom-input-label/component-custom-input-label-lg.html
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    
+    var inputs = document.querySelectorAll('.js-form-group'),
+        index, button;
+    
+    for (index = 0; index < inputs.length; index++) {
+        button = inputs[index];
+        button.addEventListener('focusin', clickHandler);
+        button.addEventListener('focusout', blurHandler);
+    }
+    
+    function clickHandler(event) {
+        event.target.parentNode.classList.add('focused');
+        event.preventDefault();
+    }
+    function blurHandler(event) {
+        event.target.value.trim() ? '' : event.target.parentNode.classList.remove('focused');
+        event.preventDefault();
+    }
+     
+    </script>
+//= script/scripts.html
+
+</html>

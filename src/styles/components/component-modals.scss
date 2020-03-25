@@ -1,0 +1,35 @@
+component-modal,
+.modal {
+    .modal-ws {
+        max-width: 100%;
+    }
+    .modal-buttons {
+        padding: $modal-inner-padding;
+        padding-top: 0;
+    }
+    .modal-button {
+        width: 100%;
+    }
+    .modal-title {
+        padding: $modal-inner-padding;
+        font-weight: $font-weight-bold;
+        position: relative;
+    }
+}
+component-modal-error,
+.modal-error {
+
+    .modal-title { 
+        padding-left: 2.8rem;
+        &:after {
+            position: absolute;
+            top: 1.2rem;
+            left: $modal-inner-padding;
+            content: ""; 
+            background: $custom-modal-error-indicator;
+            height: 20px;
+            width: 20px;
+            font-family: $font-family-icon;
+        }        
+    }
+}

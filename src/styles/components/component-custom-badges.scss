@@ -1,0 +1,11 @@
+.badge{
+    &.badge-customer-info {
+        font-size: $font-size-lg;
+    }
+    &.badge-info {
+        color: $white;
+    }
+    &.badge-warning {
+        color: $white;
+    }
+}

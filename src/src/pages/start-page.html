@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        //= chunks/theme-name.html
+        - Authorization verifying
+    </title>
+    //= chunks/head.html
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+    <header class="header navbar">
+        <div class="logo">
+            <a href="/">
+                <img class="logo-img" src="../../assets/img/logo.png">
+            </a>
+        </div>
+        <div>
+            <div class="input-group">
+                <div class="input-group-prepend custom-dropdown custom-dropdown-point">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Points</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <div class="input-group-prepend custom-dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">En</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+                <div>
+                    //= components/custom-navigation-left/component-custom-navigation-left.html
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container start-page mb-5">
+        <div class="row">
+            <div class="col-12 start-page-wrapper">
+                <div class="start-page-left">
+                    //= components/calculator-main/component-calculator-main.html
+                </div>
+                <div class="start-page-right">
+                    <div class="start-page-title pb-2">
+                        We transfer money instantly & securely
+                        worldwide
+                    </div>
+                    <div class="start-page-info heading-display-2 heading-variation heading-normal pb-4">
+                        BP Remit Online service offers you fast remittances for the lowest<br> fee. Check it right now!
+                    </div>
+                    <div class="start-page-button">
+                        <button type="button" class="btn btn-lg btn-outline-secondary"><i class="fas fa-caret-right pr-2"></i>
+                            Watch how we transfer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+//= script/scripts.html
+
+</html>

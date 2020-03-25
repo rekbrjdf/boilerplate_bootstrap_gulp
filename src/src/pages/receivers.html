@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        //= chunks/theme-name.html
+        - Receivers
+    </title>
+    //= chunks/head.html
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+    <header class="header navbar">
+        <div class="logo">
+            <a href="/">
+                <img class="logo-img" src="../../assets/img/logo.png">
+            </a>
+        </div>
+        <div>
+            <div class="input-group">
+                <div class="input-group-prepend custom-dropdown custom-dropdown-point">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Points</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <div class="input-group-prepend custom-dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">En</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+                <div>
+                    //= components/custom-navigation-left/component-custom-navigation-left.html
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12 mb-3">
+                //= components/custom-header/component-custom-header.html
+            </div>
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <h2 class="heading-display-2 heading-variation">Receivers</h2>
+                    </div>
+                    <div class="col-12 col-lg-3"></div>
+                    <div class="col-12 col-lg-3">
+                        //= components/search-input/control-search-input.html
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-2">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <div class="receiver-preview">
+                                    <div class="receiver-preview-wrapper">
+                                        <div class="receiver-preview-start check-favorite js-star">
+                                            <div class="check-favorite-icon"></div>
+                                        </div>
+                                        <div class="receiver-preview-avatar-wrapper">
+                                            <div class="receiver-preview-avatar">
+                                                <!-- <img src="../../../assets/img/face-big.png" class="receiver-preview-img"> -->
+                                                <div class="receiver-preview-name heading-display-1">
+                                                    AW
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="receiver-preview-send">
+                                            <div class="receiver-preview-send-id">ID 897461125</div>
+                                            <div class="receiver-preview-login">
+                                                Ann Wachowski
+                                            </div>
+                                            <button type="button" class="btn btn-secondary btn-sm">Send</button>
+                                        </div>
+                                        <div class="receiver-preview-content">
+                                            <div class="receiver-preview-content-title mb-1">Last remittance</div>
+                                            <div class="receiver-preview-info">
+                                                <div class="receiver-preview-flag">
+                                                    <span
+                                                        class="receiver-preview-flag-img custom-flag flag-icon flag-icon-cz"></span>
+                                                </div>
+                                                <div class="receiver-preview-date">
+                                                    <div class="data-display data-display-3">
+                                                        <div class="data-input">Date</div>
+                                                    </div>
+                                                    <div class="heading-display-5">23.11.19</div>
+                                                </div>
+                                                <div class="receiver-preview-amount">
+                                                    <div class="data-display data-display-3">
+                                                        <div class="data-input">Amount</div>
+                                                    </div>
+                                                    <div class="receiver-preview-money heading-display-5 heading-bold">
+                                                        1000 CZK</div>
+                                                </div>
+                                                <div class="receiver-preview-direction">
+                                                    <div class="data-display data-display-3">
+                                                        <div class="data-input">Direction</div>
+                                                    </div>
+                                                    <div class="heading-display-5">Czech Republic (Kaymaks)</div>
+                                                </div>
+                                            </div>
+                                            <div class="receiver-preview-content-button"><button type="button"
+                                                    class="btn btn-outline-secondary btn-sm">Repeat</button></div>
+                                        </div>
+
+                                        <div class="receiver-preview-navigation popover-actions">
+                                            <div class="popover-actions-arrow" data-toggle="collapse1">
+                                                <div class="popover-actions-angle-right"></div>
+                                            </div>
+                                            <div class="popover-actions-buttons-wrapper">
+                                                <div class="popover-actions-button-wrapper popover-actions-btn-preview">
+                                                    <button type="button" class="btn btn-link btn-preview"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        View
+                                                    </div>
+                                                </div>
+                                                <div class="popover-actions-button-wrapper popover-actions-btn-edit">
+                                                    <button class="btn btn-link btn-edit"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        Edit
+                                                    </div>
+                                                </div>
+                                                <div class="popover-actions-button-wrapper  popover-actions-btn-list">
+                                                    <button class="btn btn-link btn-list"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        History
+                                                    </div>
+                                                </div>
+                                                <div class="popover-actions-button-wrapper">
+                                                    <button class="btn btn-link btn-trash"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        Delete
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row receiver-preview-history">
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-12 receiver-preview-history-buttons-wrapper">
+                                                <div class="receiver-preview-history-buttons">
+                                                    <button type="button"
+                                                        class="receiver-preview-history-button btn btn-link btn-list">History
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="receiver-preview-history-wrapper jumbotron jumbotron-light">
+                                                    <div class="receiver-preview-history-close">
+                                                        <i class="receiver-preview-history-close-icon"></i>
+                                                    </div>
+                                                    <!-- component receiver-preview-history begin -->
+                                                    <div class="receiver-preview-history-item">
+                                                        <div class="receiver-preview-history-filter">
+                                                            <button class="btn btn-link btn-sliders" type="button"
+                                                                data-toggle="collapse" data-target="#collapseExample"
+                                                                aria-expanded="false"
+                                                                aria-controls="collapseExample"></button>
+                                                            <div class="collapse" id="collapseExample">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <div class="row">
+                                                                            <div class="col-12 col-lg-4">
+                                                                                <div class="row">
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+                                                                                        <label>From</label>
+                                                                                        <div class="form-control-date">
+                                                                                            <div
+                                                                                                class="form-control-date-wrapper">
+                                                                                                <input type="text"
+                                                                                                    class="form-control form-control-date"
+                                                                                                    id="exampleInput"
+                                                                                                    placeholder="11.12.2019">
+                                                                                                <i class="form-control-date-icon"
+                                                                                                    aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+                                                                                        <label>To</label>
+                                                                                        <div class="form-control-date">
+                                                                                            <div
+                                                                                                class="form-control-date-wrapper">
+                                                                                                <input type="text"
+                                                                                                    class="form-control form-control-date"
+                                                                                                    id="exampleInput2"
+                                                                                                    placeholder="11.12.2019">
+                                                                                                <i class="form-control-date-icon"
+                                                                                                    aria-hidden="true"></i>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+                                                                                        <input class="form-control "
+                                                                                            type="text"
+                                                                                            placeholder="Amount from">
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+                                                                                        <input class="form-control "
+                                                                                            type="text"
+                                                                                            placeholder="Amount to">
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12 col-lg-8">
+                                                                                <div class="row">
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+
+                                                                                        <label
+                                                                                            class="d-none d-lg-inline-block"></label>
+                                                                                        <div
+                                                                                            class="custom-select-arrow">
+                                                                                            <select
+                                                                                                placeholder="Receiver"
+                                                                                                class="custom-select">
+                                                                                                <option selected="">
+                                                                                                    Receiver</option>
+                                                                                                <option value="1">One
+                                                                                                </option>
+                                                                                                <option value="2">Two
+                                                                                                </option>
+                                                                                                <option value="3">Three
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+                                                                                        <label
+                                                                                            class="d-none d-lg-inline-block"></label>
+                                                                                        <div
+                                                                                            class="custom-select-arrow">
+                                                                                            <select
+                                                                                                placeholder="Direction"
+                                                                                                class="custom-select">
+                                                                                                <option selected="">
+                                                                                                    Direction</option>
+                                                                                                <option value="1">One
+                                                                                                </option>
+                                                                                                <option value="2">Two
+                                                                                                </option>
+                                                                                                <option value="3">Three
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-2 form-group">
+                                                                                        <div
+                                                                                            class="custom-select-arrow">
+                                                                                            <select placeholder="EUR"
+                                                                                                class="custom-select">
+                                                                                                <option selected="">EUR
+                                                                                                </option>
+                                                                                                <option value="1">One
+                                                                                                </option>
+                                                                                                <option value="2">Two
+                                                                                                </option>
+                                                                                                <option value="3">Three
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-4 form-group">
+                                                                                        <div
+                                                                                            class="custom-select-arrow">
+                                                                                            <select placeholder="Status"
+                                                                                                class="custom-select">
+                                                                                                <option selected="">
+                                                                                                    Status</option>
+                                                                                                <option value="1">One
+                                                                                                </option>
+                                                                                                <option value="2">Two
+                                                                                                </option>
+                                                                                                <option value="3">Three
+                                                                                                </option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-12 col-lg-6 form-group">
+                                                                                        <input class="form-control"
+                                                                                            type="text"
+                                                                                            placeholder="Ref. #">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12 mb-2">
+                                                                                <div class="row">
+                                                                                    <div class="col-12 col-lg-8"></div>
+                                                                                    <div class="col-12 col-lg-4">
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-6 col-lg-6 mb-2">
+                                                                                                <button
+                                                                                                    class="btn btn-link btn-block">Clear</button>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-6 col-lg-6 mb-2">
+                                                                                                <button
+                                                                                                    class="btn btn-secondary btn-block">Apply</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="receiver-preview-history-table-wrapper mb-2">
+                                                            <table class="receiver-preview-history-table">
+                                                                <tbody>
+                                                                    <tr class="receiver-preview-history-row">
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-receiver">
+                                                                            <label>Receiver</label>
+                                                                            <div
+                                                                                class="heading-display-4 heading-bold heading-muted-color">
+                                                                                Ann
+                                                                                Wachowski</div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-flag">
+                                                                            <span
+                                                                                class="receiver-preview-history-flag-img custom-flag flag-icon flag-icon-gb"></span>
+                                                                        </td>
+                                                                        <td class="receiver-preview-history-col">
+                                                                            <div
+                                                                                class="receiver-preview-history-direction">
+                                                                                <label>Direction</label>
+                                                                                <div class="heading-display-5">Czech
+                                                                                    Republic (Kaymaks)</div>
+                                                                            </div>
+                                                                            <div class="receiver-preview-history-date">
+                                                                                <label>Date</label>
+                                                                                <div
+                                                                                    class="heading-display-5 heading-bold">
+                                                                                    23.11.19</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="receiver-preview-history-col">
+                                                                            <div
+                                                                                class="receiver-preview-history-outer-ref">
+                                                                                <label>Outer Ref. #</label>
+                                                                                <div
+                                                                                    class="heading-display-5 heading-bold heading-muted-color">
+                                                                                    KRN222545555CZ</div>
+                                                                            </div>
+                                                                            <div class="receiver-preview-history-ref">
+                                                                                <label>Ref. #</label>
+                                                                                <div class="heading-display-5">
+                                                                                    11125555555688</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-amount">
+                                                                            <label>Amount</label>
+                                                                            <div
+                                                                                class="heading-display-4 receiver-preview-history-amount-text">
+                                                                                1000 CZK
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-status">
+                                                                            <label>Status</label>
+                                                                            <div>
+                                                                                <span
+                                                                                    class="heading-display-5 badge badge-success">Paid
+                                                                                    off</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-check">
+                                                                            <button type="button"
+                                                                                class="receiver-preview-history-button-preview btn btn-link btn-eye-slash p-0"></button>
+                                                                            <button type="button"
+                                                                                class="btn btn-link btn-refresh p-0"></button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr
+                                                                        class="receiver-preview-history-row receiver-preview-history-block">
+                                                                        <td colspan="3" class="d-none d-lg-table-cell">
+                                                                        </td>
+                                                                        <td class="receiver-preview-history-col">
+                                                                            <div class="receiver-preview-history-ref">
+                                                                                <label>Exchange rate</label>
+                                                                                <div class="heading-display-5">1EUR
+                                                                                    =25.5326 CZK</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-amount">
+                                                                            <label>Comission</label>
+                                                                            <div class="heading-display-5">10 EUR</div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-status">
+                                                                            <label>Source amount</label>
+                                                                            <div class="heading-display-5">39 EUR</div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-check">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="receiver-preview-history-row">
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-receiver">
+                                                                            <label>Receiver</label>
+                                                                            <div
+                                                                                class="heading-display-4 heading-bold heading-muted-color">
+                                                                                Ann
+                                                                                Wachowski</div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-flag">
+                                                                            <span
+                                                                                class="receiver-preview-history-flag-img custom-flag flag-icon flag-icon-ru"></span>
+                                                                        </td>
+                                                                        <td class="receiver-preview-history-col">
+                                                                            <div
+                                                                                class="receiver-preview-history-direction">
+                                                                                <label>Direction</label>
+                                                                                <div class="heading-display-5">Czech
+                                                                                    Republic (Kaymaks)</div>
+                                                                            </div>
+                                                                            <div class="receiver-preview-history-date">
+                                                                                <label>Date</label>
+                                                                                <div
+                                                                                    class="heading-display-5 heading-bold">
+                                                                                    23.11.19</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="receiver-preview-history-col">
+                                                                            <div
+                                                                                class="receiver-preview-history-outer-ref">
+                                                                                <label>Outer Ref. #</label>
+                                                                                <div
+                                                                                    class="heading-display-5 heading-bold heading-muted-color">
+                                                                                    KRN222545555CZ</div>
+                                                                            </div>
+                                                                            <div class="receiver-preview-history-ref">
+                                                                                <label>Ref. #</label>
+                                                                                <div class="heading-display-5">
+                                                                                    11125555555688</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-amount">
+                                                                            <label>Amount</label>
+                                                                            <div
+                                                                                class="heading-display-4 receiver-preview-history-amount-text">
+                                                                                1000 CZK
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-status">
+                                                                            <label>Status</label>
+                                                                            <div>
+                                                                                <span
+                                                                                    class="heading-display-5 badge badge-warning">Approved</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-check">
+                                                                            <button type="button"
+                                                                                class="receiver-preview-history-button-preview btn btn-link btn-eye-slash p-0"></button>
+                                                                            <button type="button"
+                                                                                class="btn btn-link btn-refresh p-0"></button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr
+                                                                        class="receiver-preview-history-row receiver-preview-history-block">
+                                                                        <td colspan="3" class="d-none d-lg-table-cell">
+                                                                        </td>
+                                                                        <td class="receiver-preview-history-col">
+
+                                                                            <div class="receiver-preview-history-ref">
+                                                                                <label>Exchange rate</label>
+                                                                                <div class="heading-display-5">1EUR
+                                                                                    =25.5326 CZK</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-amount">
+                                                                            <label>Comission</label>
+                                                                            <div class="heading-display-5">10 EUR</div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-status">
+                                                                            <label>Source amount</label>
+                                                                            <div class="heading-display-5">39 EUR</div>
+                                                                        </td>
+                                                                        <td
+                                                                            class="receiver-preview-history-col receiver-preview-history-check">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <!-- component receiver-preview-history end -->
+                                                    <nav aria-label="Page navigation example"
+                                                        class=" custom-pagination">
+                                                        <ul class="pagination custom-pagination-list">
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" href="#" tabindex="-1"
+                                                                    aria-disabled="true">
+                                                                    <i
+                                                                        class="custom-pagination-list-arraw-left"></i></a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">1</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">2</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">3</a>
+                                                            </li>
+                                                            <li class="page-item">
+                                                                <a class="page-link" href="#"><i
+                                                                        class="custom-pagination-list-arraw-right"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="navigation-all pl-3">
+                                                            <span>View</span>
+                                                            <span>
+                                                                <div class="btn-group custom-dropdown">
+                                                                    <button type="button"
+                                                                        class="btn btn-link dropdown-toggle"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        30
+                                                                    </button>
+                                                                    <div class="dropdown-menu">
+                                                                        <a class="dropdown-item" href="#">10</a>
+                                                                        <a class="dropdown-item" href="#">20</a>
+                                                                    </div>
+                                                                </div>
+                                                            </span>
+                                                        </div>
+                                                    </nav>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                //= components/component-receiver-preview-edit/component-receiver-preview-edit.html
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                //= components/component-receiver-preview-view/component-receiver-preview-view.html
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <button class="btn btn-link receiver-preview-btn-collapse" type="button"
+                                    data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    View all
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 collapse" id="collapseExample">
+                                <div class=" receiver-preview">
+                                    <div class=" receiver-preview-wrapper">
+                                        <div class="receiver-preview-start check-favorite js-star">
+                                            <div class="check-favorite-icon"></div>
+                                        </div>
+                                        <div class="receiver-preview-avatar-wrapper">
+                                            <div class="receiver-preview-avatar">
+                                                <!-- <img src="../../../assets/img/face-big.png" class="receiver-preview-img"> -->
+                                                <div class="receiver-preview-name heading-display-1">
+                                                    AW
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="receiver-preview-send">
+                                            <div class="receiver-preview-send-id">ID 897461125</div>
+                                            <div class="receiver-preview-login">
+                                                Ann Wachowski
+                                            </div>
+                                            <button type="button" class="btn btn-secondary btn-sm">Send</button>
+                                        </div>
+                                        <div class="receiver-preview-content">
+                                            <div class="receiver-preview-content-title mb-1">Last remittance</div>
+                                            <div class="receiver-preview-info">
+                                                <div class="receiver-preview-flag">
+                                                    <span
+                                                        class="receiver-preview-flag-img custom-flag flag-icon flag-icon-cz"></span>
+                                                </div>
+                                                <div class="receiver-preview-date">
+                                                    <div class="data-display data-display-3">
+                                                        <div class="data-input">Date</div>
+                                                    </div>
+                                                    <div class="heading-display-5">23.11.19</div>
+                                                </div>
+                                                <div class="receiver-preview-amount">
+                                                    <div class="data-display data-display-3">
+                                                        <div class="data-input">Amount</div>
+                                                    </div>
+                                                    <div class="receiver-preview-money heading-display-5 heading-bold">
+                                                        1000 CZK</div>
+                                                </div>
+                                                <div class="receiver-preview-direction">
+                                                    <div class="data-display data-display-3">
+                                                        <div class="data-input">Direction</div>
+                                                    </div>
+                                                    <div class="heading-display-5">Czech Republic (Kaymaks)</div>
+                                                </div>
+                                            </div>
+                                            <div class="receiver-preview-content-button"><button type="button"
+                                                    class="btn btn-outline-secondary btn-sm">Repeat</button></div>
+                                        </div>
+
+                                        <div class="receiver-preview-navigation popover-actions">
+                                            <div class="popover-actions-arrow" data-toggle="collapse1">
+                                                <div class="popover-actions-angle-right"></div>
+                                            </div>
+                                            <div class="popover-actions-buttons-wrapper">
+                                                <div class="popover-actions-button-wrapper popover-actions-btn-preview">
+                                                    <button type="button" class="btn btn-link btn-preview"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        View
+                                                    </div>
+                                                </div>
+                                                <div class="popover-actions-button-wrapper popover-actions-btn-edit">
+                                                    <button class="btn btn-link btn-edit"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        Edit
+                                                    </div>
+                                                </div>
+                                                <div class="popover-actions-button-wrapper  popover-actions-btn-list">
+                                                    <button class="btn btn-link btn-list"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        History
+                                                    </div>
+                                                </div>
+                                                <div class="popover-actions-button-wrapper">
+                                                    <button class="btn btn-link btn-trash"></button>
+                                                    <div class="popover-actions-button-text">
+                                                        Delete
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="receiver-preview receiver-preview-add show">
+                                    <div class="receiver-preview-wrapper">
+                                        <div class="receiver-preview-avatar-wrapper">
+                                            <div class="receiver-preview-avatar">
+                                                <div class="receiver-preview-name heading-display-1">
+                                                    <i class="far fa-plus" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="receiver-preview-send">
+                                            <div class="receiver-preview-login">
+                                                Add new
+                                            </div>
+                                            <div class="receiver-preview-add-text">Please ensure the beneficiary is a
+                                                know
+                                                person to you. BP Remit will
+                                                not be liable for sending funds to unknown persons.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            $(document).ready(function () {
+                                $('.js-star').click(function () {
+                                    $('.check-favorite-icon').toggleClass("active");
+                                });
+                                $('.popover-actions-btn-list').click(function () {
+                                    $('.receiver-preview-history').toggleClass("active");
+                                });
+                                $('.popover-actions-btn-edit').click(function () {
+                                    $('.receiver-preview-edit').toggleClass("active");
+                                });
+                                $('.popover-actions-btn-preview').click(function () {
+                                    $('.receiver-preview-view').toggleClass("active");
+                                });
+                                $('[data-toggle="collapse1"]').click(function () {
+                                    $('.receiver-preview').toggleClass("show");
+                                    $('.popover-actions-button-text').toggleClass("active");
+                                    $('.popover-actions-angle-right').toggleClass("active");
+                                });
+                            });
+                        </script>
+                        <script>
+                            $(document).ready(function () {
+                                $('.receiver-preview-history-button-preview').click(function () {
+                                    $('.receiver-preview-history-button-preview').toggleClass("active");
+                                    $('.receiver-preview-history-block').toggleClass("active");
+                                });
+                                $('.receiver-preview-history-close').click(function () {
+                                    $('.receiver-preview-history').toggleClass("active");
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+//= script/scripts.html
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        //= chunks/theme-name.html
+        - Custom Alert
+    </title>
+    //= chunks/head.html
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h2>Custom Alert</h2>
+            </div>
+            <div class="col-12 mb-5">
+                <h4>Angular version: </h4>
+                <iframe src="https://stackblitz.com/edit/angular-custom-alert-component?embed=1&amp;file=index.html" width="100%" height="500px"></iframe>
+
+                <h4 class="mt-5">jQuery version: </h4>
+                <p>Alert success</p>
+                //= components/custom-alert/alert-success.html
+                <p>Alert warning</p>
+                //= components/custom-alert/alert-warning.html
+                <p>Alert danger</p>
+                //= components/custom-alert/alert-danger.html
+                <p>Alert info</p>
+                //= components/custom-alert/alert-info.html
+            </div>
+        </div>
+
+    </div>
+
+</body>
+//= script/scripts.html
+</html>

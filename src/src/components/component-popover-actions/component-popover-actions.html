@@ -1,0 +1,40 @@
+<div class="popover-actions">
+    <div class="popover-actions-arrow" data-toggle="collapse">
+        <div class="popover-actions-angle-right"></div>
+    </div>
+    <div class="popover-actions-buttons-wrapper">
+        <div class="popover-actions-button-wrapper">
+            <button type="button" class="btn btn-link btn-preview"></button>
+            <div class="popover-actions-button-text">
+                View
+            </div>
+        </div>
+        <div class="popover-actions-button-wrapper">
+            <button class="btn btn-link btn-edit"></button>
+            <div class="popover-actions-button-text">
+                Edit
+            </div>
+        </div>
+        <div class="popover-actions-button-wrapper">
+            <button class="btn btn-link btn-list"></button>
+            <div class="popover-actions-button-text">
+                History
+            </div>
+        </div>
+        <div class="popover-actions-button-wrapper">
+            <button class="btn btn-link btn-trash"></button>
+            <div class="popover-actions-button-text">
+                Delete
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.component-step-collapse-button').click(function () {
+            $('.popover-actions-button-text').toggleClass("active");
+            $('.popover-actions-angle-right').toggleClass("active");
+        });
+    });
+</script>
