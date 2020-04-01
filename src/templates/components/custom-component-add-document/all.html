@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Finflow Bootstrap Theme
+        - Component Add Document
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" types="text/css" href="/style/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/81d2a47e92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h2>Component Add Document</h2>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- component-add-document begin -->
+                        <div class="input-group navbar justify-content-center">
+                            <div class="custom-dropdown custom-dropdown-btn-add">
+                                <button class="dropdown-toggle btn btn-link" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    Additional documents
+                                </button>
+                                <div class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+                                    <a onclick="handleExpand()" class="dropdown-item" href="#">
+                                        New Identity document
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Residence confirmation
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Source of income
+                                    </a>
+                                </div>
+                        
+                        
+                            </div>
+                        </div>
+                        <div class="row component-add-document visible" id="js-add-document">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col component-step">
+                                        <div class="row mb-4">
+                                            <div class="col-12 component-step-header">
+                                                <h2 class="component-step-pre-title">Identity document<span
+                                                        class="badge badge badge-info ml-2">Not
+                                                        added</span></h2>
+                                                <div class="component-step-info data-display data-display-2">
+                                                    <div class="data-input">
+                                                        Please upload your relevant ID document which may be used to prove your person
+                                                        identity,
+                                                        like
+                                                        passport, identity card, residence permit and etc.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <label>Type document</label>
+                                                        <div class="custom-select-arrow">
+                                                            <select placeholder="Nationality" class="custom-select custom-select-lg">
+                                                                <option selected="">Germany</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <label>ID number</label>
+                                                        <input class="form-control form-control-lg" type="text" placeholder="ID number">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <label>Issued by</label>
+                                                        <input class="form-control form-control-lg" type="text" placeholder="Issued by">
+                                                    </div>
+                                                </div>
+                        
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <label>Country issued</label>
+                                                        <div class="custom-select-arrow">
+                                                            <select placeholder="Country issued" class="custom-select custom-select-lg">
+                                                                <option selected="">Country issued</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <label>Issue date</label>
+                                                        <div class="form-control-date">
+                                                            <div class="form-control-date-wrapper">
+                                                                <input type="text" class="form-control form-control-lg form-control-date"
+                                                                    id="exampleInput" placeholder="Issue date">
+                                                                <i class="form-control-date-icon"
+                                                                        aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12 form-group">
+                                                        <label>Expiry date</label>
+                                                        <div class="form-control-date">
+                                                            <div class="form-control-date-wrapper">
+                                                                <input type="text" class="form-control form-control-lg form-control-date"
+                                                                    id="exampleInput" placeholder="Expiry date">
+                                                                <i class="form-control-date-icon"
+                                                                        aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-6"></div>
+                                            <div class="col-12 col-lg-6">
+                                                <div class="row">
+                                                    <div class="col-6 col-lg-6 mb-2"><button
+                                                            class="btn btn-link btn-lg btn-block">Cancel</button></div>
+                                                    <div class="col-6 col-lg-6 mb-2"><button
+                                                            class="btn btn-primary btn-lg  btn-block">Save</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            function handleExpand() {
+                                var element = document.getElementById("js-add-document");
+                                element.classList.toggle("visible");
+                            } 
+                        </script> 
+                        <!-- component-add-document end -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-5">
+                    <h2>Component Add Document Read Only</h2>
+                </div>
+                <div class="col-12 mb-5">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- component-add-document-read-only begin -->
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <h2 class="component-step-pre-title">Identity Document<span class="badge badge-warning ml-2">Added</span> </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>Identity document</label>
+                                            <div class="h4 heading-display-4 heading-variation heading-normal">Passport</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>Number ID</label>
+                                            <div class="h4 heading-display-4 heading-variation heading-normal">7500655412 </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>Issued by</label>
+                                            <div class="h4 heading-display-4 heading-variation heading-normal">Ministry of foreign affairs
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+                                <div class="col-12 col-sm-6 col-lg-6">
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>Citizenship</label>
+                                            <div class="h4 heading-display-4 heading-variation heading-normal">United Kingdom</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>Issued by</label>
+                                            <div class="h4 heading-display-4 heading-variation heading-normal">31.03.2018</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 form-group">
+                                            <label>Expired by</label>
+                                            <div class="h4 heading-display-4 heading-variation heading-normal">30.03.2028</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- component-add-document-read-only end -->
+                        </div>
+                    </div>
+                </div>
+        </div> 
+    </div> 
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+</html>

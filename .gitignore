@@ -7,5 +7,5 @@ package-lock.json
 .angulardoc.json
 vendor/
 resources/
-build/src/assets/img/flags/
-build/src/assets/img/flags
+assets/img/flags/
+assets/img/flags

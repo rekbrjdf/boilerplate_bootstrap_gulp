@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Finflow Bootstrap Theme
+        - Authorization verifying
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" types="text/css" href="/style/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/81d2a47e92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div> 
+    <header class="header navbar"> 
+        <div class="logo">
+            <a href="/">
+                <img class="logo-img" src="../../assets/img/logo.png">
+            </a>
+        </div> 
+        <div>
+            <div class="input-group">
+                <div class="input-group-prepend custom-dropdown custom-dropdown-point">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Points</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <div class="input-group-prepend custom-dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">En</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container authorization">
+        <div class="row">
+            <div class="col">
+                <div class="login-form">
+                    <div class="login-form-title">
+                        <div>Login</div>
+                    </div>
+                    <div class="login-form-info mb-4">
+                        <div>Enter your mobile phone number to get access to full service. We will send a text message with a 6-digit
+                            verification code. Standard rates apply.</div>
+                    </div>
+                    <div class="login-form-block">
+                        <div class="login-form-country">
+                                <button class="btn btn-link dropdown-toggle custom-dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <span class="custom-flag flag-icon flag-icon-gb"></span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                        <span class="custom-flag flag-icon flag-icon-cz"></span>
+                
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                        <span class="custom-flag flag-icon flag-icon-cz"></span>
+                
+                                </a>
+                            </div> 
+                        </div>
+                        <div class="login-form-input">
+                            <input class="form-control form-control-lg" type="text" placeholder="Phone number">
+                        </div> 
+                        <div class="login-form-button">
+                            <a href="authorization-verifying.html" class="btn btn-primary btn-block btn-lg">Send</a>
+                        </div>
+                        <div class="login-form-agree">
+                                <div class="custom-control custom-checkbox custom-muted-checkbox custom-control-lg">
+                                        <input type="checkbox" class="custom-control-input" id="customChecksecondary" name="example1">
+                                        <label class="custom-control-label login-form-label" for="customChecksecondary">I agree with the terms of the <a href="#" class="custom-checkbox-link">Agreement on comprehensive customer service using your personal profile</a> and the terms of the <a href="#" class="custom-checkbox-link">Transfer Agreement of BP Remit.</a></label>
+                                </div>
+                            </div>
+                    </div>
+                   
+                </div>
+            </div> 
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+</html>

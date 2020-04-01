@@ -13,16 +13,17 @@ const googleWebFonts = require("gulp-google-webfonts");
 const cssnano = require('gulp-cssnano');
 const gulpCopy = require('gulp-copy'); 
 const debug = require('gulp-debug');
+const merge = require('merge-stream');
 
 // file locations
 const buildFolder = './build';
 const srcFolder = './src';
 const options = {};
 const indexFile = [
-  `${srcFolder}/src/*.html`, 
-  `${srcFolder}/src/components/*.html`, 
-  `${srcFolder}/src/components/**/*.html`, 
-  `${srcFolder}/src/pages/*.html`
+  
+  `${srcFolder}/templates/components/*.html`, 
+  `${srcFolder}/templates/components/**/*.html`, 
+  `${srcFolder}/templates/pages/*.html`
 ];
 
 const cssFiles = `${srcFolder}/styles/bootstrap.scss`;
@@ -36,7 +37,7 @@ const handleError = err => {
 
 // build files
 
-const css = () => {
+const css_production = () => {
   console.log("Build minified bootstrap");
   return src(cssFiles)
       .pipe(sourceMap.init())
@@ -51,15 +52,43 @@ const css = () => {
       .pipe(rename("bootstrap.min.css"))
       .pipe(cssnano())
       .pipe(sourceMap.write("./"))
-      .pipe(dest(`${buildFolder}/src/style`));
+      .pipe(dest(`${buildFolder}/style`));
+};
+
+const css = () => {
+  console.log("Build minified bootstrap");
+  return src(cssFiles)
+      .pipe(sourceMap.init())
+      .pipe(sass())
+      .pipe(prefix({
+          cascade: false
+      }))
+      .pipe(cleanCSS({
+          compatibility: "ie8"
+      }))
+      .pipe(rename("bootstrap.min.css"))
+      .pipe(cssnano())
+      .pipe(sourceMap.write("./"))
+      .pipe(dest(`${buildFolder}/style`));
+};
+
+const scss_production = () => { 
+  return src(cssFiles)
+      .pipe(debug())
+      .pipe(sass())
+      .pipe(prefix({
+          cascade: false
+      }))
+      .pipe(dest(`${buildFolder}/style`));
 };
 
 const html = () => {
   console.log("Building HTML in progress...");
 
-  return src(indexFile, {base:'src'})
+  return merge(src(indexFile, {base:'src/templates'}), 
+        src(`${srcFolder}/templates/*.html`, {base:'src/templates'})) 
         .pipe(rigger()).on('error', handleError)
-        .pipe(dest(buildFolder));
+        .pipe(dest(buildFolder))
 };
 
 const js = () => {
@@ -69,7 +98,7 @@ const js = () => {
           'node_modules/jquery/dist/jquery.js',
           'node_modules/popper.js/dist/umd/popper.js'
         ])
-        .pipe(dest(`${buildFolder}/src/js`));
+        .pipe(dest(`${buildFolder}/js`));
 };
 
 const fonts = () => {
@@ -77,13 +106,13 @@ const fonts = () => {
   return src(`${srcFolder}/assets/fonts/fonts.list`)
         .pipe(googleWebFonts(options))
         .pipe(debug())
-        .pipe(dest(`${buildFolder}/src/fonts`));
+        .pipe(dest(`${buildFolder}/fonts`));
 };
 
 const assets = () => {
   console.log("Copying assets from ./assets to dist");
-  return src(assestFiles)
-        .pipe(gulpCopy(buildFolder));
+  return src(assestFiles, {base:'src'})
+        .pipe(dest(buildFolder));
 };
 
 const copy_img = () => {
@@ -91,7 +120,7 @@ const copy_img = () => {
   return src([
             'node_modules/flag-icon-css/flags/4x3/*'
         ])
-        .pipe(dest(`${buildFolder}/src/assets/img/flags/4x3/`));
+        .pipe(dest(`${buildFolder}/assets/img/flags/4x3/`));
 };
 
 //watch files
@@ -103,13 +132,16 @@ const clean = () => del(buildFolder);
 
 const devServer = () =>
   browserSync.init({
-    server: `${buildFolder}/src`,
+    server: `${buildFolder}`,
     files: [`${buildFolder}/**`]
   })
 
-const build = series(clean, parallel(html, css, js, assets, copy_img))
+const buildProd = series(clean, parallel(fonts, html, scss_production, css_production, js, assets, copy_img))
+const build = series(clean, parallel(fonts, html, scss_production, css, js, assets, copy_img))
 const watchFiles = parallel(watchCss, watchHtml)
 
-exports.default = build
+exports.default = buildProd
+exports.buildProd = buildProd
 exports.build = build
+exports.watchProd = series(buildProd, parallel(devServer, watchFiles))
 exports.watch = series(build, parallel(devServer, watchFiles))

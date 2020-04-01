@@ -62,7 +62,7 @@ component-document-scanner,
             margin: auto;
             width: 225px;
             height: auto;
-            background: url(../../../assets/img/intersect.png) no-repeat;
+            background: url("../../assets/img/intersect.png") no-repeat;
             background-size: contain;
         }
 
@@ -78,7 +78,7 @@ component-document-scanner,
             }
 
             &:after {
-                background: url(../../../assets/img/frame.png) no-repeat;
+                background: url(../../assets/img/frame.png) no-repeat;
                 background-size: contain;
                 width: auto;
                 top: 0;

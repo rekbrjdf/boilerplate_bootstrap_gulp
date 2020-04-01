@@ -6,8 +6,9 @@
   "scripts": {
     "docs-build": "hugo --cleanDestinationDir",
     "docs-serve": "hugo server --port 9002 --disableFastRender",
-    "build": "gulp",
-    "dev": "gulp watch"
+    "build-prod": "gulp buildProd",
+    "build-dev": "gulp build",
+    "watch-dev": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,7 @@
     "gulp-string-replace": "^1.1.2",
     "gulp-watch": "^5.0.1",
     "hugo-bin": "^0.55.1",
+    "merge-stream": "^2.0.0",
     "postcss-cli": "^7.1.0"
   },
   "hugo-bin": {

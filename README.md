@@ -13,22 +13,48 @@ Add to the head of your page next strings:
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> <!-- font awesome (used on menu icons) -->
 ```
-
-# Why I can't build this project? 
-KendoUI from the Node Modules is not build correctly out the box; At first you are need to correct an Errors of compliler:
-_variables.scss
-$calendar-view-height: $calendar-cell-size * 8;// calc( #{$calendar-cell-size * 8} + #{$calendar-header-height} ) !default;
-$calendar-cell-size: ($calendar-cell-size-px / $font-size) * 1em !default;
-
-================
-_layout.scss
-.k-calendar-view {
-	width: $calendar-cell-size;// ;(7 * $calendar-cell-size);
-	height: $calendar-cell-size;// (7 * $calendar-cell-size);
-}
-
+ 
+```bash
+├── src
+│   ├── assets
+│   │   ├── favicon
+│   │   ├── fonts
+│   │   ├── img
+│   │   └── logotipe
+│   ├── styles
+│   │   └──  **/*.scss
+│   └── templates
+│       └── **/*.html
+├── build
+│   ├── assets
+│   │   ├── favicon
+│   │   ├── fonts
+│   │   ├── img
+│   │   └── logotipe
+│   ├── components
+│   |   └── **/*.html
+│   ├── fonts
+│   ├── js
+│   │   └── **/*.js
+│   ├── pages
+│   |   └── **/*.html
+│   ├── styles
+│   │   └──  **/*.css
+│   ├── component-list.html
+│   └── index.html
+├── node_modules
+├── site (Hugo static resources)
+├── config.yml (Hugo configuration) 
+├── .browserslistrc
+├── README.md
+├── package.json
+└── .gitignore
+```
 
 # How to start?
 1. `npm install`
-2. `npm run build` to build styles
-3. `npm run dev` to watch files
+2. `npm run build-prod`: to build assets for production
+3. `npm run build-dev`: to build assets for preview 
+4. `npm run watch-dev`: to watch files (Runs BrowserSync and watches for changes, running build when changes are detected)
+    
+    

@@ -1,17 +1,11 @@
 languageCode:           "en"
-title:                  "Bootstrap"
+title:                  "Finflow Bootstrap for Bestfinance"
 baseURL:                "https://getbootstrap.com"
 enableInlineShortcodes: true
 
-markup:
-  goldmark:
-    renderer:
-      unsafe:           true
-  highlight:
-    noClasses:          false
-  tableOfContents:
-    startLevel:         2
-    endLevel:           6
+pygmentsUseClasses:     true
+# you can use ```lang if you want too
+pygmentsCodeFences:     true
 
 buildDrafts:            true
 buildFuture:            true
@@ -20,12 +14,15 @@ enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
+blackfriday:
+  fractions:            false
+
 publishDir:             "_gh_pages"
 
 module:
   mounts:
-    - source:           dist
-      target:           static/docs/4.3/dist
+    - source:           build
+      target:           static/docs/4.3/build
     - source:           site/assets
       target:           assets
     - source:           site/content
@@ -43,15 +40,14 @@ module:
 
 params:
   description:          "The most popular HTML, CSS, and JS library in the world."
-  authors:              "Mark Otto, Jacob Thornton, and Bootstrap contributors"
+  authors:              "Mark Otto, Jacob Thornton, Finflow and Bootstrap contributors"
   social_image_path:    /docs/4.3/assets/brand/bootstrap-social.png
   social_logo_path:     /docs/4.3/assets/brand/bootstrap-social-logo.png
 
   current_version:      "4.3.1"
   current_ruby_version: "4.3.1"
-  rfs_version:          "9.0.2"
   docs_version:         "4.3"
-  repo:                 "https://github.com/twbs"
+  repo:                 "https://github.com/twbs/bootstrap"
   twitter:              "getbootstrap"
   slack:                "https://bootstrap-slack.herokuapp.com/"
   opencollective:       "https://opencollective.com/bootstrap"
@@ -66,11 +62,11 @@ params:
 
   cdn:
     # See https://www.srihash.org for info on how to generate the hashes
-    css:              "http://192.168.113.3:3000/style/bootstrap.min.css"
+    css:              "http://127.0.0.1:5500/dist/bootstrap.css"
     css_hash:         "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     js:               "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     js_hash:          "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     js_bundle:        "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
     js_bundle_hash:   "sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
-    popper:           "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    popper_hash:      "sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    popper:           "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+    popper_hash:      "sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9+4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"

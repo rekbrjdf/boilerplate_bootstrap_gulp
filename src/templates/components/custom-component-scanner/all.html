@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Finflow Bootstrap Theme
+        - Component Scanner
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" types="text/css" href="/style/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/81d2a47e92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-12 mb-5">
+                    <h2>Component Scanner</h2>
+                </div>
+                <div class="col-12 mb-5">
+                    <div class="row">
+                        <div class="col-12">
+                                <p><a href="#myModal2" id="btn2" class="btn btn-primary">Open the modal</a></p>
+                            <!-- component-document-scanner begin -->
+                            <div id="myModal2" class="modal fade">
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content document-scanner">
+                                            <div class="modal-header document-scanner-header pb-0">
+                                                <h3 class="heading-display-3 heading-variation">Scanner</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div class="modal-body pt-0">
+                                                <div class="document-scanner-info text-center mb-3">
+                                                    <div class="heading-display-5 heading-variation heading-normal">Take photo of ID or choose existing one</div>
+                                                </div>
+                                                <div class="document-scanner-button-up mb-2"> 
+                                                    <div class="mx-2">
+                                                        <button class="btn btn-link btn-camera btn-lg"> 
+                                                        </button></div>
+                                                    <div class="mx-2">
+                                                        <button class="btn btn-link btn-folder btn-lg"> 
+                                                        </button></div> 
+                                                </div>
+                                                <div class="row mb-2">
+                                                        <div class="col">
+                                                            <div class="document-scanner-content data-display data-display-2">
+                                                                <div class="data-input">
+                                                                    <div class="mb-2">Please upload your relevant ID document. Please&nbsp;ensure&nbsp;that:</div>
+                                                                    <ul class="document-scanner-content-list">
+                                                                        <li>the photo is well lit without hotspots</li>
+                                                                        <li>your ID is completely in focus</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <!-- Delete class document-scanner-container-visible for default condition  -->
+                                                        <div class="document-scanner-container document-scanner-photo document-scanner-container-visible">
+                                                                <div class="document-scanner-container-block">
+                                                                        <i class="fal fa-exclamation-circle fa-3x mb-2"></i>
+                                                                        <div class="heading-display-6 heading-variation heading-normal mb-3">Scanner ID reguests access to computer Camera !</div>
+                                                                        <button type="button" class="btn btn-secondary">Confirm</button> 
+                                                                </div>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                              
+                                                <div class="text-center container mb-2">
+                                                    <div class="row mb-1">
+                                                        <div class="col-12">
+                                                            <div class="carousel-main row">
+                                                                <div class="col-1 carousel-arrow">
+                                                                    <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                                        <div class="carousel-nav-icon carousel-prev">
+                                
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-10 carousel-document-center">
+                                                                    <!--Start carousel-->
+                                                                    <div id="carouselExampleIndicators" data-interval="false" class="carousel slide"
+                                                                        data-ride="carousel">
+                                
+                                                                        <div class="carousel-inner">
+                                                                            <div class="carousel-item active">
+                                                                                <div class="carousel-wrapper">
+                                                                                    <div style="background-image:url('http://uksestroreck.ru/upload/medialibrary/8dd/content-img.png');"
+                                                                                        class="carousel-item-col document-scanner-empty">
+                                                                                        <div class="document-scanner-slide">Front slide</div>
+                                                                                    </div>
+                                                                                    <div style="background-image:url('https://www.veridocglobal.com/Themes/Veridoc/Content/img/solution-img/fake.jpg');"
+                                                                                        class="carousel-item-col">
+                                                                                        <div class="document-scanner-slide">Back slide</div>
+                                                                                    </div> 
+                                                                                </div> 
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--End carousel-->
+                                                                </div>
+                                                                <div class="col-1 carousel-arrow">
+                                                                    <a href="#carouselExampleIndicators" data-slide="next">
+                                                                        <div class="carousel-nav-icon carousel-next">
+                                
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                
+                                
+                                                <div class="row">
+                                                    <div class="col-3"></div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <div class="col-6 pr-3">
+                                                                <div class="row">
+                                                                    <button type="button" class="document-scanner-button btn btn-secondary">Scan</button>
+                                                                </div>
+                                
+                                                            </div>
+                                                            <div class="col-6 pl-3">
+                                                                <div class="row">
+                                                                    <button type="button" class="document-scanner-button btn btn-primary">Save</button>
+                                
+                                                                </div>
+                                
+                                
+                                                            </div>
+                                                        </div>
+                                
+                                                    </div>
+                                                  
+                                                </div>
+                                
+                                
+                                            </div>
+                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- component-document-scanner end -->
+                        </div>
+                    </div>
+                </div>
+                <script>
+                        $(function () {
+                            $("#btn2").click(function () {
+                                $("#myModal2").modal('show');
+                            });
+                        });
+                    </script>
+            
+        </div> 
+    </div> 
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+</html>

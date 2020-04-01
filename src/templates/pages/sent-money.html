@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Finflow Bootstrap Theme
+        - Send money
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" types="text/css" href="/style/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/81d2a47e92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+    <div style="position: fixed; right: 0; top: 160px; z-index: 10;">
+        <!-- component-profile-status begin -->
+        <div class="toast profile-status show" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body"> 
+                        <div class="profile-status-title h3 mb-3">Money remittance progress</div>
+                        <div class="profile-status-progress-line mb-3">
+                            <div class="profile-status-chart">
+                                    <div class="profile-status-bar" style="width: 50%;"></div>
+                                    <!-- Add class profile-status-text-all when width: >63% -->
+                                    <div class="profile-status-text">50%</div>
+                            </div>
+                        </div>
+                        <div class="profile-status-info mb-3">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">When progress pill level will reach 100% your remittance will be send successfully! </div>
+                            </div>
+                        </div> 
+                </div>
+            </div>
+        <!-- component-profile-status end -->
+        <!-- component send money summary begin -->
+        <div class="toast send-money-summary-modal show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                <div class="send-money-summary mb-3">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="send-money-summary-title data-input">
+                                Summary
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="send-money-summary-header">
+                                Amount
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Destination country</div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-2 emphasis">
+                                <div class="data-input">Czech Republic</div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Destination Amount</div>
+                            </div>
+                        </div>
+        
+                        <div class="col-6  form-group">
+                            <div class="heading-display-4 heading-bold">1000 EUR</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Comission</div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-2 emphasis">
+                                <div class="data-input">100 EUR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Rate</div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-2 emphasis">
+                                <div class="data-input">1 EUR = 1.09164 USD</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="send-money-summary-header">
+                                To
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Full Name</div>
+                            </div>
+        
+                        </div>
+                        <div class="col-6 form-group">
+                            <div class="heading-display-4 heading-variation heading-bold">Pushkin Alexander Sergeevich</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Date of Birth</div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-group mb-3">
+                            <div class="data-display data-display-2 emphasis">
+                                <div class="data-input">01.01.1988</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <div class="data-display data-display-3">
+                                <div class="data-input">Sex</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="data-display data-display-2 emphasis">
+                                <div class="data-input">M</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- component send money summary end -->
+    </div>
+    
+    <header class="header navbar">
+        <div class="logo">
+            <a href="/">
+                <img class="logo-img" src="../../assets/img/logo.png">
+            </a>
+        </div>
+        <div>
+            <div class="input-group">
+                <div class="input-group-prepend custom-dropdown custom-dropdown-point">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Points</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                </div>
+                <div class="input-group-prepend custom-dropdown">
+                    <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">En</button>
+                    <div class="dropdown-menu animate slideIn">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </div>
+                <div>
+                    <!-- component-custom-navigation begin -->
+                    <nav class="navbar custom-navbar navbar-light bg-light">
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="nav-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                  </div>
+                        </button> 
+                    
+                        
+                    </nav>
+                    <div class="custom-navbar">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Remittance
+                                        </a>
+                                        <div class="dropdown-menu show" aria-labelledby="navbarDropdown1">
+                                            <a class="dropdown-item" href="#">Send money</a>
+                                            <a class="dropdown-item" href="#">History</a> 
+                                            <a class="dropdown-item" href="#">Receivers</a>
+                                            <a class="dropdown-item" href="#">Drafts</a> 
+                                        </div>
+                                    </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        Profile
+                                    </a>
+                                    <div class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Personal data</a>
+                                        <a class="dropdown-item" href="#">Account</a>
+                                        <a class="dropdown-item" href="#">Security</a>  
+                                        <a class="dropdown-item" href="#">Settings</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- component-custom-navigation end -->
+                    <script>
+                    $(document).ready(function(){
+                    	$('.nav-icon').click(function(){
+                    		$(this).toggleClass('open');
+                    	});
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-12 mb-3">
+                <!-- coomponent-custom-header begin -->
+                <div class="custom-header row">
+                    <div class="col custom-header-block">
+                        <div class="custom-header-left">
+                            <!-- component-custom-navigation begin -->
+                            <nav class="navbar custom-navbar navbar-light">
+                                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <div class="nav-icon">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </button>
+                
+                
+                            </nav>
+                            <div class="custom-navbar">
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdown1" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Remittance
+                                            </a>
+                                            <div class="dropdown-menu show" aria-labelledby="navbarDropdown1">
+                                                <a class="dropdown-item" href="#">Send money</a>
+                                                <a class="dropdown-item dropdown-on-item" href="#">History</a>
+                                                <a class="dropdown-item" href="#">Receivers</a>
+                                                <a class="dropdown-item" href="#">Drafts</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle h2" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                Profile
+                                            </a>
+                                            <div class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="#">Personal data</a>
+                                                <a class="dropdown-item" href="#">Account</a>
+                                                <a class="dropdown-item" href="#">Security</a>
+                                                <a class="dropdown-item" href="#">Settings</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- component-custom-navigation end -->
+                            <script>
+                                $(document).ready(function () {
+                                    $('.nav-icon').click(function () {
+                                        $(this).toggleClass('open');
+                                    });
+                                });
+                            </script>
+                
+                        </div>
+                        <div class="custom-header-right">
+                            <div class="custom-header-phone">
+                                <a href="tel: +79007000000" class="h1 custom-header-phone-number heading-display-1">+44 20****5751</a>
+                            </div>
+                            <a href="#" class="btn btn-link btn-lg btn-sign-out pt-2 pr-0"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- coomponent-custom-header begin -->
+            </div>
+            <div class="col-12 mb-2">
+                <h2 class="heading-display-2 heading-variation">Send money</h2>
+            </div>
+            <div class="col-12">
+                <div class="alert alert-warning" role="alert">
+                    Please, fill in your Profile. Your remittance can’t be proceed temporally because Profile info is
+                    not completed. Be sure we already has saved your remittance draft in Drafts.
+                </div>
+            </div>
+            <div class="col-12 mb-2">
+                <!-- component-step-1 begin -->
+                <div class="row component-step component-step-1">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="component-step-title mb-2">Step 1</div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 component-step-header">
+                                <h2 class="component-step-pre-title">Amount</h2>
+                                <div class="component-step-info data-display data-display-2">
+                                    <div class="data-input">
+                                        Choose a Destination country. Fill the source amount field or Destination amount field depending
+                                        on your preferences.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- component send-money-calculator begin -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <div class="custom-select-arrow">
+                                            <select placeholder="Country" class="custom-select custom-select-lg">
+                                                <option selected="">Destination country</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Source amount</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control form-control-lg"
+                                                aria-label="Text input with dropdown button">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary btn-lg dropdown-toggle" type="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another
+                                                        action</a>
+                                                    <a class="dropdown-item" href="#">Something
+                                                        else
+                                                        here</a> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Destination amount</label>
+                                        <div class="input-group">
+                                            <input type="number" class="form-control form-control-lg"
+                                                aria-label="Text input with dropdown button">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary btn-lg dropdown-toggle" type="button"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another
+                                                        action</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12"> 
+                                        <div class="jumbotron jumbotron-light">
+                                            <div class="row ">
+                                                <div class="col-12 col-lg-4 form-group">
+                                                    <label>Receiver will get</label>
+                                                    <div class="heading-display-2 heading-bold">1100 USD</div>
+                                                </div>
+                                                <div class="col-12 col-lg-4 form-group">
+                                                    <label>Will be charged from my card</label>
+                                                    <div class="heading-display-2 heading-bold heading-muted-color">1015 EUR</div>
+                                                </div>
+                                                <div class="col-12 col-lg-4 form-group">
+                
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-4 form-group">
+                                                    <label>We will convert</label>
+                                                    <div class="heading-display-4  heading-variation heading-normal">1000 USD</div>
+                                                </div>
+                                                <div class="col-12 col-lg-4 form-group">
+                                                    <label>Exchange rate</label>
+                                                    <div class="heading-display-4  heading-variation heading-normal">1EUR = 1.10 USD
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-4 form-group">
+                                                    <label>Comission</label>
+                                                    <div class="heading-display-4  heading-variation heading-normal">15 EUR</div>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div> 
+                                </div>
+                
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <button class="btn btn-primary btn-lg  btn-block">Get started</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- component send-money-calculator end -->
+                
+                    </div>
+                </div>
+                <!-- component-step-1 end -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-warning" role="alert">
+                            For source amount 3000 EUR and above, the Residence confirmation is required. Please upload it below!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row component-step">
+                    <div class="col">
+                
+                        <div class="row mb-4">
+                            <div class="col-12 component-step-header">
+                                <h2 class="component-step-pre-title">Residence confirmation<span class="badge badge badge-info ml-2">Not
+                                        added</span></h2>
+                                <div class="component-step-info data-display data-display-2">
+                                    <div class="data-input">
+                                        Please upload your relevant document which may be used to prove your person identity, like<br>
+                                        passport, identity card, residence permit and etc.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row mb-3">
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Type document</label>
+                                        <div class="custom-select-arrow">
+                                            <select placeholder="Nationality" class="custom-select custom-select-lg">
+                                                <option selected="">Germany</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>ID number</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="ID number">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Issued by</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="Issued by">
+                                    </div>
+                                </div>
+                
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-6">
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Country issued</label>
+                                        <div class="custom-select-arrow">
+                                            <select placeholder="Country issued" class="custom-select custom-select-lg">
+                                                <option selected="">Country issued</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Issue date</label>
+                                        <div class="form-control-date">
+                                            <div class="form-control-date-wrapper">
+                                                <input type="text" class="form-control form-control-lg form-control-date"
+                                                    id="exampleInput" placeholder="Issue date">
+                                                <i class="form-control-date-icon"
+                                                                aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <label>Expiry date</label>
+                                        <div class="form-control-date">
+                                            <div class="form-control-date-wrapper">
+                                                <input type="text" class="form-control form-control-lg form-control-date"
+                                                    id="exampleInput" placeholder="Expiry date">
+                                                <i class="form-control-date-icon"
+                                                                aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-12 col-lg-6"></div>
+                            <div class="col-12 col-lg-6">
+                                <div class="row">
+                                    <div class="col-6 col-lg-6 mb-2"><button class="btn btn-link btn-lg btn-block">Cancel</button></div>
+                                    <div class="col-6 col-lg-6 mb-2"><button class="btn btn-primary btn-lg  btn-block">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col">
+                                <div class="component-step-info data-display data-display-2">
+                                    <div class="data-input">
+                                        <div class="mb-2">Please upload your relevant Residence confirmation document. Please&nbspensure&nbspthat:</div>
+                                        <ul class="component-step-list">
+                                            <li>the photo is well lit without hotspots</li>
+                                            <li>your ID is completely in focus</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 col-lg-3  block m-auto"><a href="#myModal2" id="btn2" class="btn btn-primary btn-lg btn-block">Scan ID</a>
+                            </div>
+                            
+                                <!-- component-document-scanner begin -->
+                                <div id="myModal2" class="modal fade">
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content document-scanner">
+                                            <div class="modal-header document-scanner-header pb-0">
+                                                <h3 class="heading-display-3 heading-variation">Scanner</h3>
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            </div>
+                                            <div class="modal-body pt-0">
+                                                <div class="document-scanner-info text-center mb-3">
+                                                    <div class="heading-display-5 heading-variation heading-normal">Take photo of ID or
+                                                        choose existing one</div>
+                                                </div>
+                                                <div class="document-scanner-button-up mb-2">
+                                                    <div class="mx-2">
+                                                        <button class="btn btn-link btn-camera btn-lg">
+                                                        </button></div>
+                                                    <div class="mx-2">
+                                                        <button class="btn btn-link btn-folder btn-lg">
+                                                        </button></div>
+                                                </div>
+                                                <div class="row mb-2">
+                                                    <div class="col">
+                                                        <div class="document-scanner-content data-display data-display-2">
+                                                            <div class="data-input">
+                                                                <div class="mb-2">Please upload your relevant ID document.
+                                                                    Please&nbsp;ensure&nbsp;that:</div>
+                                                                <ul class="document-scanner-content-list">
+                                                                    <li>the photo is well lit without hotspots</li>
+                                                                    <li>your ID is completely in focus</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <!-- Delete class document-scanner-container-visible for default condition  -->
+                                                        <div
+                                                            class="document-scanner-container document-scanner-photo document-scanner-container-visible">
+                                                            <div class="document-scanner-container-block">
+                                                                <i class="fal fa-exclamation-circle fa-3x mb-2"></i>
+                                                                <div class="heading-display-6 heading-variation heading-normal mb-3">
+                                                                    Scanner ID reguests access to computer Camera !</div>
+                                                                <button type="button" class="btn btn-secondary">Confirm</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="text-center container mb-2">
+                                                    <div class="row mb-1">
+                                                        <div class="col-12">
+                                                            <div class="carousel-main row">
+                                                                <div class="col-1 carousel-arrow">
+                                                                    <a href="#carouselExampleIndicators" role="button"
+                                                                        data-slide="prev">
+                                                                        <div class="carousel-nav-icon carousel-prev">
+                
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="col-10 carousel-document-center">
+                                                                    <!--Start carousel-->
+                                                                    <div id="carouselExampleIndicators" data-interval="false"
+                                                                        class="carousel slide" data-ride="carousel">
+                
+                                                                        <div class="carousel-inner">
+                                                                            <div class="carousel-item active">
+                                                                                <div class="carousel-wrapper">
+                                                                                    <div style="background-image:url('http://uksestroreck.ru/upload/medialibrary/8dd/content-img.png');"
+                                                                                        class="carousel-item-col document-scanner-empty">
+                                                                                        <div class="document-scanner-slide">Front slide
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div style="background-image:url('https://www.veridocglobal.com/Themes/Veridoc/Content/img/solution-img/fake.jpg');"
+                                                                                        class="carousel-item-col">
+                                                                                        <div class="document-scanner-slide">Back slide
+                                                                                        </div>
+                                                                                    </div>
+                
+                                                                                </div>
+                                                                            </div> 
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--End carousel-->
+                                                                </div>
+                                                                <div class="col-1 carousel-arrow">
+                                                                    <a href="#carouselExampleIndicators" data-slide="next">
+                                                                        <div class="carousel-nav-icon carousel-next">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-3"></div>
+                                                    <div class="col-6">
+                                                        <div class="row">
+                                                            <div class="col-6 pr-3">
+                                                                <div class="row">
+                                                                    <button type="button"
+                                                                        class="document-scanner-button btn btn-secondary">Scan</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-6 pl-3">
+                                                                <div class="row">
+                                                                    <button type="button"
+                                                                        class="document-scanner-button btn btn-primary">Save</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- component-document-scanner end --> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-warning" role="alert">
+                            Your monthly limit has been exceeded. To complete current remittance please upload Source of income below!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row  component-step">
+                    <div class="col-12">
+                            <div class="row mb-4">
+                                    <div class="col-12 component-step-header">
+                                        <h2 class="component-step-pre-title">Source of income<span class="badge badge badge-info ml-2">Not
+                                                added</span></h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-12">
+                                            <label>Source of income</label>
+                                            <div class="input-group mb-3">
+                                                <select type="text" class="form-control custom-select custom-select-lg" placeholder="Source of income" aria-label="" aria-describedby="basic-addon1">
+                                                        <option selected="">Country issued</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option> 
+                                                </select>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-primary btn-attach btn-lg" type="button"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                </div>
+                
+                <script>
+                        $(function () {
+                            $("#btn2").click(function () {
+                                $("#myModal2").modal('show');
+                            });
+                        });
+                    </script>
+            </div>
+            <div class="col-12 mb-2">
+                <!-- component-send-money-step-2 begin -->
+                <div class="row component-step component-step-1">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="component-step-title mb-2">Step 2</div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 component-step-header">
+                                <h2 class="component-step-pre-title">Receiver</h2>
+                                <div class="component-step-info data-display data-display-2">
+                                    <div class="data-input">
+                                        Fill the data to whom you are sending the remittance. Please ensure the beneficiary is a know
+                                        person to you. BP Remit will not be liable for sending funds to unknown persons.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Surname</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="Surname">
+                                    </div>
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Name</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Middle name (optional)</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="Name">
+                                    </div>
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Date of Birth</label>
+                                        <div class="form-control-date">
+                                            <div class="form-control-date-wrapper">
+                                                <input type="text" class="form-control form-control-lg form-control-date"
+                                                    id="exampleInput" placeholder="Date of Birth">
+                                                <i class="form-control-date-icon"
+                                                                aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 form-group mt-3">
+                                        <div class="form-radio-inline">
+                
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="customRadio1" name="example1"
+                                                    value="example1">
+                                                <label class="custom-control-label" for="customRadio1">Male</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" class="custom-control-input" id="customRadio2" name="example2"
+                                                    value="example2">
+                                                <label class="custom-control-label" for="customRadio2">Female</label>
+                                            </div>
+                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6 form-group">
+                                        <label>Contact phone</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="+123 45 67890">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-12 form-group">
+                                                            <label>Address</label>
+                                                            <div class="custom-select-arrow">
+                                                                <select placeholder="Country" class="custom-select custom-select-lg">
+                                                                    <option selected="">Germany</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12  form-group">
+                                                            <label>City</label>
+                                                            <input class="form-control form-control-lg" type="text" placeholder="City">
+                                                        </div>
+                                                        <div class="col-12  form-group">
+                                                            <label>Street</label>
+                                                            <input class="form-control form-control-lg" type="text"
+                                                                placeholder="Street">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-6 col-sm-6 col-lg-6 form-group">
+                                                            <label>Building</label>
+                                                            <input class="form-control form-control-lg" type="text" placeholder="Bld.">
+                                                        </div>
+                                                        <div class="col-6 col-sm-6 col-lg-6 form-group">
+                                                            <label>Apart.</label>
+                                                            <input class="form-control form-control-lg" type="text"
+                                                                placeholder="Apart.">
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 col-sm-12 col-lg-12 form-group">
+                                                            <label>Post code</label>
+                                                            <input class="form-control form-control-lg" type="text"
+                                                                placeholder="Post code">
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 col-sm-12 col-lg-12 form-group">
+                                                            <label>Email</label>
+                                                            <input class="form-control form-control-lg" type="text"
+                                                                placeholder="example@gmail.com">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-5">
+                                    <div class="col-12">
+                                        <a class="component-step-collapse-button" data-toggle="collapse" href="#multiCollapseExample1"
+                                            role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Show less</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-12 form-group">
+                                        <label>Reason of remittance</label>
+                                        <input class="form-control form-control-lg" type="text" placeholder="Reason of remittance">
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-12 col-lg-6 col-lg-6 mb-2"><button type="button"
+                                            class="btn btn-link btn-lg btn-block" data-toggle="modal"
+                                            data-target=".bd-example-modal">Cancel</button></div>
+                                    <div class="col-12 col-lg-6 col-lg-6 mb-2"><button
+                                            class="btn btn-primary btn-lg  btn-block">Save</button>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <!-- component send money summary begin -->
+                                        <div class="toast send-money-summary-block show" role="alert" aria-live="assertive"
+                                            aria-atomic="true">
+                                            <div class="toast-body">
+                                                <div class="send-money-summary mb-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="send-money-summary-title data-input">
+                                                                Summary
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="send-money-summary-header">
+                                                                Amount
+                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Destination country</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-2 emphasis">
+                                                                <div class="data-input">Czech Republic</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="row">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Destination Amount</div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="col-6  form-group">
+                                                            <div class="heading-display-4 heading-bold">1000 EUR</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Comission</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-2 emphasis">
+                                                                <div class="data-input">100 EUR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Rate</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-2 emphasis">
+                                                                <div class="data-input">1 EUR = 1.09164 USD</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="send-money-summary-header">
+                                                                To
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Full Name</div>
+                                                            </div>
+                
+                                                        </div>
+                                                        <div class="col-6 form-group">
+                                                            <div class="heading-display-4 heading-variation heading-bold">Pushkin
+                                                                Alexander Sergeevich</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Date of Birth</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 form-group mb-3">
+                                                            <div class="data-display data-display-2 emphasis">
+                                                                <div class="data-input">01.01.1988</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col-6 form-group">
+                                                            <div class="data-display data-display-3">
+                                                                <div class="data-input">Sex</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="data-display data-display-2 emphasis">
+                                                                <div class="data-input">M</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-6 col-lg-6 col-lg-6 mb-2"><button type="button"
+                                                                    class="btn btn-link btn-lg btn-block" data-toggle="modal"
+                                                                    data-target=".bd-example-modal">Back</button></div>
+                                                            <div class="col-6 col-lg-6 col-lg-6 mb-2"><button
+                                                                    class="btn btn-primary btn-lg  btn-block">Pay</button>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- component send money summary end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- component-custom-modal begin -->
+                    <div class="modal fade bd-example-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content custom-modal">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <i class="fal fa-exclamation-circle fa-3x mb-2 modal-body-icon"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <h4 class="heading-display-4  heading-variation heading-normal">Are you sure you
+                                                        want to
+                                                        cancel<br> the remittance?</h4>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <button type="button" class="btn btn-link btn-block">No</button>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <button type="button" class="btn btn-secondary btn-block">Yes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- component-custom-modal end -->
+                </div>
+                <!-- component-send-money-step-2 end -->
+                <script>
+                    $(document).ready(function () {
+                
+                        $('.component-step-collapse-button').click(function () {
+                            $('.component-step-collapse-button').toggleClass("active");
+                            if ($('.component-step-collapse-button').hasClass("active")) {
+                                $('.component-step-collapse-button').text("Hide more");
+                            } else {
+                                $('.component-step-collapse-button').text("Show less");
+                            }
+                        });
+                
+                    });
+                </script>
+            </div>
+            <div class="col-12 mb-2">
+                <!-- component-send-money-step-3 begin -->
+                <div class="row component-step component-step-3">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="component-step-title mb-2">Step 3</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 component-step-header">
+                                <h2 class="component-step-pre-title text-left">Payment</h2>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-12 form-group">
+                                <label>Amount charged from my card</label>
+                                <div class="heading-display-2 heading-bold heading-muted-color">1015 EUR</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row mb-4">
+                                    <div class="col-12 text-center">
+                                        Enter Cardholder name and Card name below.
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-12 form-group">
+                                        <iframe src="../../../assets/img/card.png" style="border:none; width: 100%; height: 340px;"></iframe>
+                                    </div>
+                                </div>
+                
+                                <div class="row mb-4">
+                                    <div class="col-6 col-lg-6 mb-2"><button class="btn btn-link btn-lg btn-block">Back</button></div>
+                                    <div class="col-6 col-lg-6 mb-2"><button class="btn btn-primary btn-lg  btn-block">Proceed</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- component-send-money-step-3 end -->
+            </div> 
+        </div>
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+</html>

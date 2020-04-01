@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Finflow Bootstrap Theme
+        - Navigation Tabs
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" types="text/css" href="/style/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/81d2a47e92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h2>Navigation Tabs</h2>
+            </div>
+            <div class="col-12 mb-5">
+                <h4>Angular example</h4>
+                <iframe src="https://stackblitz.com/edit/component-nav-tabs?embed=1&amp;file=app/basic.html"
+                    width="100%" height="500px"></iframe>
+                <hr>
+                <h4>jQuery Example</h4>
+                <!-- component-nav-tabs begin -->
+                <div class="component-nav-tabs nav-tabs">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="incoming-payments" data-toggle="tab" href="#incoming" role="tab"
+                                aria-controls="incoming" aria-selected="true">Incoming payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="between-tab" data-toggle="tab" href="#between" role="tab" aria-controls="between"
+                                aria-selected="false">Between</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="outgoing-tab" data-toggle="tab" href="#outgoing" role="tab" aria-controls="outgoing"
+                                aria-selected="false">Outgoing payments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="charge-tab" data-toggle="tab" href="#charge" role="tab" aria-controls="charge"
+                                aria-selected="false">Manual charge Off</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profitloss-tab" data-toggle="tab" href="#profitloss" role="tab"
+                                aria-controls="profitloss" aria-selected="false">Profitloss</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="inner-tab" data-toggle="tab" href="#inners" role="tab" aria-controls="inners"
+                                aria-selected="false">Inner</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="incoming" role="tabpanel" aria-labelledby="incoming-tab">... home
+                        </div>
+                        <div class="tab-pane fade" id="between" role="tabpanel" aria-labelledby="between-tab">... between</div>
+                        <div class="tab-pane fade" id="outgoing" role="tabpanel" aria-labelledby="outgoing-tab">... outgoing</div>
+                        <div class="tab-pane fade" id="charge" role="tabpanel" aria-labelledby="charge-tab">... charge</div>
+                        <div class="tab-pane fade" id="profitloss" role="tabpanel" aria-labelledby="profitloss-tab">... profitloss</div>
+                        <div class="tab-pane fade" id="inners" role="tabpanel" aria-labelledby="inner-tab">... inner</div>
+                    </div>
+                </div>
+                <!-- component-nav-tabs end -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+</html>

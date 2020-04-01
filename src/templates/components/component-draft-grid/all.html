@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        Finflow Bootstrap Theme
+        - Component Draft Grid
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/fonts/fonts.css">
+    <link rel="stylesheet" types="text/css" href="/style/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/81d2a47e92.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-12">
+                <a onclick="history.back()" style="cursor: pointer"> <i class="fas fa-backward"></i> Back </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5">
+                <h2>Component Draft Grid</h2>
+            </div>
+            <div class="col-12 mb-5">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- component draft-grid begin -->
+                        <div class="draft-grid">
+                            <div class="draft-grid-filter">
+                                <button class="btn btn-link btn-sliders" type="button" data-toggle="collapse"
+                                    data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></button>
+                                <div class="collapse" id="collapseExample">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 form-group">
+                                                            <label>From</label>
+                                                            <div class="form-control-date">
+                                                                <div class="form-control-date-wrapper">
+                                                                    <input type="text" class="form-control form-control-date" id="exampleInput"
+                                                                        placeholder="11.12.2019">
+                                                                    <i class="form-control-date-icon"
+                                                                        aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 form-group">
+                                                            <label>To</label>
+                                                            <div class="form-control-date">
+                                                                <div class="form-control-date-wrapper">
+                                                                    <input type="text" class="form-control form-control-date" id="exampleInput2"
+                                                                        placeholder="11.12.2019">
+                                                                    <i class="form-control-date-icon"
+                                                                        aria-hidden="true"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 form-group">
+                                                            <input class="form-control " type="text" placeholder="Amount from">
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 form-group">
+                                                            <input class="form-control " type="text" placeholder="Amount to">
+                                                        </div>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 form-group">
+                        
+                                                            <label class="d-none d-lg-inline-block"></label>
+                                                            <div class="custom-select-arrow">
+                                                                <select placeholder="Receiver" class="custom-select">
+                                                                    <option selected="">Receiver</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div> 
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 form-group">
+                                                            <label class="d-none d-lg-inline-block"></label>
+                                                            <div class="custom-select-arrow">
+                                                                <select placeholder="Direction" class="custom-select">
+                                                                    <option selected="">Direction</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                        
+                                                        </div>
+                                                        <div class="col-12 col-lg-12 form-group">
+                                                            <div class="custom-select-arrow">
+                                                                <select placeholder="EUR" class="custom-select">
+                                                                    <option selected="">EUR</option>
+                                                                    <option value="1">One</option>
+                                                                    <option value="2">Two</option>
+                                                                    <option value="3">Three</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-2">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6"></div>
+                                                        <div class="col-12 col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-6 col-lg-6 mb-2"><button class="btn btn-link btn-block">Clear</button></div>
+                                                                <div class="col-6 col-lg-6 mb-2"><button class="btn btn-secondary btn-block">Apply</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="draft-grid-buttons-wrapper">
+                                <div class="draft-grid-link">Select all</div>
+                                <button class="btn btn-link btn-trash  ">
+                                </button>
+                        
+                            </div>
+                            <div class="draft-grid-table-wrapper mb-2">
+                                 <table class="draft-grid-table">
+                                <tbody>
+                                    <tr class="draft-grid-row">
+                                        <td class="draft-grid-col draft-grid-date">
+                                            <label>Date</label>
+                                            <div class="heading-display-5 heading-bold">23.11.19</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-receiver">
+                                            <label>Receiver</label>
+                                            <div class="heading-display-4 heading-bold heading-muted-color">Ann Wachowski</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-flag"> 
+                                            <span class="draft-grid-flag-img custom-flag flag-icon flag-icon-gb"></span>
+                                        </td>
+                                               
+                                        <td class="draft-grid-col draft-grid-direction">
+                                            <label>Direction</label>
+                                            <div class="heading-display-5">Czech Republic (Kaymaks)</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-amount">
+                                            <label>Amount</label>
+                                            <div class="heading-display-4 draft-grid-amount-text">1000 CZK</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-button"><button type="button"
+                                                class="btn btn-secondary">Send</button></td>
+                                        <td class="draft-grid-col draft-grid-check">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                                                <label class="custom-control-label" for="customCheck"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="draft-grid-row">
+                                        <td class="draft-grid-col draft-grid-date">
+                                            <label>Date</label>
+                                            <div class="heading-display-5 heading-bold">23.11.19</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-receiver">
+                                            <label>Receiver</label>
+                                            <div class="heading-display-4 heading-bold heading-muted-color">Ann Wachowski</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-flag"> 
+                                            <span class="draft-grid-flag-img custom-flag flag-icon flag-icon-de"></span>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-direction">
+                                            <label>Direction</label>
+                                            <div class="heading-display-5">Germany (Kaymaks)</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-amount">
+                                            <label>Amount</label>
+                                            <div class="heading-display-4 draft-grid-amount-text">0 CZK</div>
+                                        </td>
+                                        <td class="draft-grid-col draft-grid-button"><button type="button"
+                                                class="btn btn-secondary">Send</button></td>
+                                        <td class="draft-grid-col draft-grid-check">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck2" name="example1">
+                                                <label class="custom-control-label" for="customCheck2"></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                           
+                        </div>
+                        
+                        <!-- component draft-grid end -->
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+
+</html>

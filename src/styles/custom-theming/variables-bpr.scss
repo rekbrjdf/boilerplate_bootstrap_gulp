@@ -472,8 +472,8 @@ $input-height-inner-lg: inherit;
 
 // // Import for the basic bootstrap functions and variables
 // // TODO: Move it out of here
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
 
 // // Import for the custom variables
 @import "variables-custom";
